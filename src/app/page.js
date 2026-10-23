@@ -3,448 +3,409 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  Sparkles,
-  ArrowRight,
-  ShieldCheck,
-  Trees,
-  Waves,
-  Building2,
-  Calendar,
   Phone,
-  Maximize2,
-  CheckCircle,
-  Award,
-  Zap,
+  ArrowRight,
   MapPin,
-  Star,
-  Download,
+  Maximize2,
+  Calendar,
+  Layers,
+  Trees,
+  ShieldCheck,
+  TrendingUp,
   Compass,
 } from "lucide-react";
 import styles from "./Home.module.css";
-import BannerModal from "@/components/BannerModal";
 import ScheduleVisitModal from "@/components/ScheduleVisitModal";
-import InteractivePlotSelector from "@/components/InteractivePlotSelector";
-import EmiCalculator from "@/components/EmiCalculator";
+import BannerModal from "@/components/BannerModal";
 
 export default function HomePage() {
-  const [bannerModalOpen, setBannerModalOpen] = useState(false);
   const [visitModalOpen, setVisitModalOpen] = useState(false);
-  const [selectedPlotForVisit, setSelectedPlotForVisit] = useState(
-    "Mojika Grand Township, Maulasar (100 Bigha)"
-  );
+  const [bannerModalOpen, setBannerModalOpen] = useState(false);
+  const [formSent, setFormSent] = useState(false);
+  const [contactData, setContactData] = useState({ name: "", phone: "", message: "" });
 
-  const directPhones = [
-    "9461051515",
-    "9461372954",
-    "9511535722",
-    "9413926030",
-    "8503818482",
-    "8764224724",
-    "9772371996",
-  ];
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (!contactData.name || !contactData.phone) return;
+    setFormSent(true);
+  };
 
-  const handleBookPlot = (plotId, sectorName) => {
-    setSelectedPlotForVisit(
-      `Plot ${plotId} (${sectorName}) - Mojika Grand Township, Maulasar`
-    );
-    setVisitModalOpen(true);
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <>
-      {/* Hero Section - Light Architectural Luxury */}
-      <section className={styles.hero}>
-        <div className="container">
-          <div className={styles.heroGrid}>
-            <div className={styles.heroContent}>
-              <div className={styles.locationCoordinates}>
-                <Compass size={14} /> Rajasthan Growth Corridor • RERA Approved
-              </div>
+      {/* ========================================================
+          HERO SECTION - EXACT MATCH TO SS1 (image.png)
+          ======================================================== */}
+      <section className={styles.heroContainer}>
+        <div className={styles.heroOverlay} />
 
-              <h1 className={styles.heroTitle}>
-                Curating Generational Legacies.
-                <span className={styles.heroSubTagline}>
-                  Bringing Jaipur&apos;s Elite Modern Living to Maulasar — A 100-Bigha Dream Township
-                </span>
-              </h1>
-
-              <p className={styles.heroDescription}>
-                Mojika Group presents Rajasthan’s landmark 100-Bigha plotted township in Maulasar.
-                Wide 60-ft palm avenues, underground electrification, resort-style clubhouse, and
-                100% clear-title demarcated plots designed for lifetime appreciation.
-              </p>
-
-              <div className={styles.heroCtaGroup}>
-                <button onClick={() => setVisitModalOpen(true)} className="btn-primary">
-                  <Calendar size={16} />
-                  <span>Book Guided Site Visit</span>
-                </button>
-
-                <button onClick={() => setBannerModalOpen(true)} className="btn-secondary">
-                  <Maximize2 size={16} />
-                  <span>Launch Announcement</span>
-                </button>
-
-                <Link href="/projects" className="btn-outline-gold">
-                  <span>Explore Portfolio</span>
-                  <ArrowRight size={15} />
-                </Link>
-              </div>
-
-              {/* Stats Bar */}
-              <div className={styles.heroStats}>
-                <div className={styles.statItem}>
-                  <span className={styles.statNumber}>100+</span>
-                  <span className={styles.statLabel}>Bigha Township</span>
-                </div>
-                <div className={styles.statItem}>
-                  <span className={styles.statNumber}>60 Ft</span>
-                  <span className={styles.statLabel}>Wide Boulevards</span>
-                </div>
-                <div className={styles.statItem}>
-                  <span className={styles.statNumber}>1,500+</span>
-                  <span className={styles.statLabel}>Happy Families</span>
-                </div>
-                <div className={styles.statItem}>
-                  <span className={styles.statNumber}>100%</span>
-                  <span className={styles.statLabel}>Clear Titles</span>
-                </div>
-              </div>
+        {/* Content */}
+        <div className={styles.heroContentWrapper}>
+          <div className={styles.heroLeft}>
+            <div className={styles.heroTagline}>
+              A NEW LANDMARK IN JAIPUR
             </div>
 
-            {/* Hero Visual Column */}
-            <div className={styles.heroVisualCol}>
-              <div className={styles.heroImageFrame}>
-                <img
-                  src="/images/hero.jpg"
-                  alt="Mojika Luxury Contemporary Villa"
-                  className={styles.heroImg}
-                />
-                <div className={styles.heroFloatingPill}>
-                  <span className={styles.floatingPillTitle}>Mojika Grand Township</span>
-                  <span className={styles.floatingPillSub}>Pre-Launch VIP Booking Open</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <h1 className={styles.heroHeadline}>
+              <span className={styles.headlineBlack}>अब मौलासर में मिलेगा</span>
+              <span className={styles.headlineRed}>जयपुर जैसा मॉडर्न लाइफस्टाइल</span>
+            </h1>
 
-      {/* Official Banner Spotlight Card */}
-      <section id="flagship" className={styles.bannerSection}>
-        <div className="container">
-          <div className={styles.bannerCard}>
-            <div className={styles.bannerMedia} onClick={() => setBannerModalOpen(true)}>
-              <img
-                src="/images/mojika-banner.png"
-                alt="Mojika Group Maulasar Official Banner"
-                className={styles.bannerThumb}
-              />
-              <div className={styles.bannerClickHint}>
-                <Maximize2 size={14} /> Click to View Full Banner
-              </div>
-            </div>
-
-            <div className={styles.bannerInfo}>
-              <div className="badge-emerald">
-                <Award size={14} /> Mega Township Launch • Maulasar
-              </div>
-              <h2 className={styles.bannerHeading}>
-                Bringing Jaipur&apos;s Elite Modern Living to Maulasar
-              </h2>
-              <p className={styles.bannerSubtext}>
-                Mojika Group brings the signature luxury, security, and world-class infrastructure
-                of Jaipur’s finest gated townships to Maulasar. A 100-Bigha master planned sanctuary
-                with 25+ resort-grade amenities.
-              </p>
-
-              <div className={styles.keyHighlights}>
-                <div className={styles.highlightPill}>
-                  <CheckCircle size={15} />
-                  <span>100 Bigha Gated Community</span>
-                </div>
-                <div className={styles.highlightPill}>
-                  <CheckCircle size={15} />
-                  <span>60ft & 40ft Wide Blacktop Roads</span>
-                </div>
-                <div className={styles.highlightPill}>
-                  <CheckCircle size={15} />
-                  <span>Clubhouse & Swimming Pool</span>
-                </div>
-                <div className={styles.highlightPill}>
-                  <CheckCircle size={15} />
-                  <span>100% Legal Registry & Spot Possession</span>
-                </div>
-              </div>
-
-              {/* Direct Hotlines from Banner */}
-              <div className={styles.callDirectBox}>
-                <span className={styles.callDirectTitle}>
-                  Direct Booking Desk (Tap to Call):
-                </span>
-                <div className={styles.directNumbers}>
-                  {directPhones.slice(0, 4).map((num) => (
-                    <a key={num} href={`tel:${num}`}>
-                      +91 {num}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Plot Master Layout Selector */}
-      <section className={styles.sectionAlt}>
-        <div className="container">
-          <InteractivePlotSelector onBookPlot={handleBookPlot} />
-        </div>
-      </section>
-
-      {/* Township Infrastructure Standards */}
-      <section className={styles.section}>
-        <div className="container">
-          <div className="section-header">
-            <span className="badge-gold">Metropolitan Quality</span>
-            <h2>Planned For Generations to Come</h2>
-            <p>
-              Engineered with world-class urban specifications, every square yard ensures safety,
-              convenience, and solid capital appreciation.
+            <p className={styles.heroSubtext}>
+              100 बीघा में फैली सपनों की नगरी।
             </p>
-          </div>
 
-          <div className={styles.featuresGrid}>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <Zap size={24} />
-              </div>
-              <h3>Underground Utilities</h3>
-              <p>
-                Zero overhead wiring. Dedicated underground electric conduits, optical fiber broadband
-                ducts, and storm water drainage networks.
-              </p>
-            </div>
-
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <Building2 size={24} />
-              </div>
-              <h3>60-Ft Palm Boulevards</h3>
-              <p>
-                Extra-wide blacktop avenues flanked by walking footpaths, manicured royal palms, and
-                solar LED streetlights.
-              </p>
-            </div>
-
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <ShieldCheck size={24} />
-              </div>
-              <h3>3-Tier Gated Security</h3>
-              <p>
-                24/7 manned security guards, RFID automated boom barriers, perimeter boundary walls,
-                and high-definition CCTV coverage.
-              </p>
-            </div>
-
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <Waves size={24} />
-              </div>
-              <h3>Pressurized Water Grid</h3>
-              <p>
-                Overhead water reservoirs, dedicated deep borewells, pressurized individual pipeline to
-                each plot, and rainwater harvesting recharge pits.
-              </p>
-            </div>
-
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <Trees size={24} />
-              </div>
-              <h3>10-Acre Central Theme Park</h3>
-              <p>
-                Expansive green lungs with yoga gazebos, reflexology walking tracks, kids play arenas,
-                and open-air gymnasiums.
-              </p>
-            </div>
-
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <Award size={24} />
-              </div>
-              <h3>Spot Demarcation & Registry</h3>
-              <p>
-                100% clear titles, immediate registry assurance, boundary pillars for each plot, and
-                instant bank loan pre-approvals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Resort Lifestyle & Amenities */}
-      <section id="amenities" className={styles.sectionAlt}>
-        <div className="container">
-          <div className={styles.amenitiesSplit}>
-            <div className={styles.amenityVisual}>
-              <img
-                src="/images/clubhouse.jpg"
-                alt="Mojika Club & Pavilion"
-                className={styles.amenityImg}
-              />
-              <div className={styles.amenityBadgeFloat}>The Mojika Club & Pavilion</div>
-            </div>
-
-            <div className={styles.amenitiesContent}>
-              <span className="badge-emerald">Resort Living</span>
-              <h2>25+ Curated Lifestyle Amenities</h2>
-              <p>
-                Live every day like a vacation. The community clubhouse serves as the premier social
-                and fitness hub for families.
-              </p>
-
-              <div className={styles.amenitiesGrid}>
-                <div className={styles.amenityItem}>
-                  <Waves size={18} className={styles.amenityItemIcon} />
-                  <span className={styles.amenityItemTitle}>Infinity Swimming Pool</span>
-                </div>
-                <div className={styles.amenityItem}>
-                  <Building2 size={18} className={styles.amenityItemIcon} />
-                  <span className={styles.amenityItemTitle}>AC Banquet & Event Lawn</span>
-                </div>
-                <div className={styles.amenityItem}>
-                  <Trees size={18} className={styles.amenityItemIcon} />
-                  <span className={styles.amenityItemTitle}>Landscaped Zen Gardens</span>
-                </div>
-                <div className={styles.amenityItem}>
-                  <Sparkles size={18} className={styles.amenityItemIcon} />
-                  <span className={styles.amenityItemTitle}>Kids Adventure Playground</span>
-                </div>
-                <div className={styles.amenityItem}>
-                  <Zap size={18} className={styles.amenityItemIcon} />
-                  <span className={styles.amenityItemTitle}>Tennis & Badminton Courts</span>
-                </div>
-                <div className={styles.amenityItem}>
-                  <ShieldCheck size={18} className={styles.amenityItemIcon} />
-                  <span className={styles.amenityItemTitle}>Yoga & Meditation Deck</span>
-                </div>
-              </div>
-
-              <button onClick={() => setVisitModalOpen(true)} className="btn-primary">
-                <Calendar size={16} />
-                <span>Schedule a Guided Clubhouse Tour</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EMI & Growth Calculator */}
-      <section id="calculator" className={styles.section}>
-        <div className="container">
-          <EmiCalculator onOpenVisitModal={() => setVisitModalOpen(true)} />
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className={styles.sectionAlt}>
-        <div className="container">
-          <div className="section-header">
-            <span className="badge-gold">Proven Trust</span>
-            <h2>Words From Our Landowners</h2>
-            <p>
-              Over 1,500+ families across Rajasthan have chosen Mojika Group for peaceful living and
-              sound investment.
-            </p>
-          </div>
-
-          <div className={styles.testimonialsGrid}>
-            <div className={styles.testiCard}>
-              <div className={styles.testiRating}>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={15} fill="#b88a29" />
-                ))}
-              </div>
-              <p className={styles.testiText}>
-                "The 100-Bigha development in Maulasar is truly a game changer for the region. The
-                wide 60-ft roads and underground utilities give it a genuine Jaipur-like standard.
-                Registry was completed effortlessly."
-              </p>
-              <div className={styles.testiUser}>
-                <strong>Narendra Choudhary</strong>
-                <span>Plot Owner, Maulasar Township</span>
-              </div>
-            </div>
-
-            <div className={styles.testiCard}>
-              <div className={styles.testiRating}>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={15} fill="#b88a29" />
-                ))}
-              </div>
-              <p className={styles.testiText}>
-                "Mojika Group lives up to their slogan 'Building The Trust'. Their transparent documentation
-                and timely development on Sikar Road made our purchase completely worry-free."
-              </p>
-              <div className={styles.testiUser}>
-                <strong>Dr. Rajeshwari Sharma</strong>
-                <span>Homeowner, Jaipur</span>
-              </div>
-            </div>
-
-            <div className={styles.testiCard}>
-              <div className={styles.testiRating}>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={15} fill="#b88a29" />
-                ))}
-              </div>
-              <p className={styles.testiText}>
-                "Getting a loan approved by SBI for our plot was seamless because all RERA and town
-                planning sanctions were in order. The free cab pickup from Jaipur for our family visit
-                was very appreciated."
-              </p>
-              <div className={styles.testiUser}>
-                <strong>Amitabh Singhal</strong>
-                <span>NRI Investor</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom CTA Strip */}
-      <section className={styles.ctaStrip}>
-        <div className="container">
-          <h2>Experience Mojika Grandeur In Person</h2>
-          <p>
-            Book your guided site inspection with complimentary chauffeur pickup from Jaipur to the
-            100-Bigha Maulasar mega development.
-          </p>
-          <div className={styles.ctaButtons}>
-            <button onClick={() => setVisitModalOpen(true)} className="btn-primary">
-              <Calendar size={16} />
-              <span>Book Free Site Visit (Free AC Cab)</span>
-            </button>
-            <a href="tel:9461051515" className="btn-secondary">
-              <Phone size={16} />
-              <span>Call +91 94610 51515</span>
+            <a href="tel:9461051515" className={styles.heroCtaBtn}>
+              <Phone size={18} />
+              <span>9461051515</span>
+              <ArrowRight size={18} />
             </a>
           </div>
+
+          <div className={styles.heroRight}>
+            <span className={styles.comingSoonScript}>Coming Soon</span>
+          </div>
+        </div>
+
+        {/* Bottom Hero Stats Card & Scroll Icon from SS1 */}
+        <div className={styles.heroBottomArea}>
+          <div className={styles.infoPillCard}>
+            <div className={styles.infoPillCol}>
+              <MapPin size={24} className={styles.infoPillIcon} />
+              <div className={styles.infoPillText}>
+                <strong>Moulasar</strong>
+                <span>JAIPUR</span>
+              </div>
+            </div>
+
+            <div className={styles.infoPillDivider} />
+
+            <div className={styles.infoPillCol}>
+              <Layers size={24} className={styles.infoPillIcon} />
+              <div className={styles.infoPillText}>
+                <strong>100 बीघा</strong>
+                <span>PREMIUM LAND</span>
+              </div>
+            </div>
+
+            <div className={styles.infoPillDivider} />
+
+            <div className={styles.infoPillCol}>
+              <Compass size={24} className={styles.infoPillIcon} />
+              <div className={styles.infoPillText}>
+                <strong>Coming Soon</strong>
+                <span>A NEW WAY OF LIVING</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Mouse Scroll Indicator */}
+          <div className={styles.scrollIndicator} onClick={() => scrollToSection("about")}>
+            <div className={styles.mouseIcon}>
+              <div className={styles.mouseWheel} />
+            </div>
+            <span>SCROLL</span>
+          </div>
         </div>
       </section>
 
-      {/* Modals */}
+
+      {/* ========================================================
+          SECTION 1: ABOUT US (from SS2)
+          ======================================================== */}
+      <section id="about" className={styles.sectionAbout}>
+        <div className="container">
+          <div className={styles.aboutGrid}>
+            <div className={styles.aboutContent}>
+              <span className="section-tag">ABOUT US</span>
+              <h2>Mojika Group</h2>
+              <span className={styles.aboutSubtitle}>BUILDING THE TRUST</span>
+              <p className={styles.aboutHindiText}>
+                Mojika Group का उद्देश्य जयपुर में बेहतर और सुव्यवस्थित रिहायशी एवं निवेश योग्य
+                प्रोजेक्ट विकसित करना है। हम भरोसे, गुणवत्ता और बेहतर भविष्य के साथ आगे बढ़ते हैं।
+              </p>
+              <Link href="/about" className="btn-mockup-secondary">
+                <span>Know More</span>
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <div className={styles.aboutVisualWrapper}>
+              <img
+                src="/images/about-gate.png"
+                alt="Mojika Group Grand Entrance Gate"
+                className={styles.aboutGateImg}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          SECTION 2: PROJECT OVERVIEW (from SS2)
+          ======================================================== */}
+      <section id="project" className={styles.sectionOverview}>
+        <div className="container">
+          <div className={styles.overviewGrid}>
+            <div className={styles.overviewContent}>
+              <span className="section-tag">PROJECT OVERVIEW</span>
+              <h2>एक सुनियोजित और आधुनिक टाउनशिप</h2>
+              <p className={styles.overviewHindiText}>
+                100 बीघा में फैला यह प्रोजेक्ट सोच-समझकर बनाई गई प्लॉटिंग, चौड़ी सड़कों और बेहतर
+                इंफ्रास्ट्रक्चर के साथ एक नई जीवनशैली प्रदान करेगा।
+              </p>
+              <Link href="/projects" className="btn-mockup-secondary">
+                <span>View Project</span>
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <div className={styles.overviewCollage}>
+              <img
+                src="/images/overview-collage.png"
+                alt="Mojika Township Overview"
+                className={styles.collageImg}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          SECTION 3: PROJECT HIGHLIGHTS (5 Cards from SS2)
+          ======================================================== */}
+      <section className={styles.sectionHighlights}>
+        <div className="container">
+          <span className="section-tag-center">PROJECT HIGHLIGHTS</span>
+
+          <div className={styles.highlightsCardWrapper}>
+            <div className={styles.highlightsGrid}>
+              {/* Card 1 */}
+              <div className={styles.highlightItem}>
+                <div className={styles.highlightIconBox}>
+                  <Layers size={22} />
+                </div>
+                <strong>100 बीघा</strong>
+                <span>Premium Land</span>
+              </div>
+
+              {/* Card 2 */}
+              <div className={styles.highlightItem}>
+                <div className={styles.highlightIconBox}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="4" y1="21" x2="10" y2="3" />
+                    <line x1="20" y1="21" x2="14" y2="3" />
+                    <line x1="12" y1="6" x2="12" y2="8" strokeDasharray="2 2" />
+                    <line x1="12" y1="12" x2="12" y2="14" strokeDasharray="2 2" />
+                    <line x1="12" y1="18" x2="12" y2="20" strokeDasharray="2 2" />
+                  </svg>
+                </div>
+                <strong>Wide Roads</strong>
+                <span>Better Connectivity</span>
+              </div>
+
+              {/* Card 3 */}
+              <div className={styles.highlightItem}>
+                <div className={styles.highlightIconBox}>
+                  <Trees size={22} />
+                </div>
+                <strong>Green Surroundings</strong>
+                <span>Peaceful Environment</span>
+              </div>
+
+              {/* Card 4 */}
+              <div className={styles.highlightItem}>
+                <div className={styles.highlightIconBox}>
+                  <ShieldCheck size={22} />
+                </div>
+                <strong>Planned Development</strong>
+                <span>Well Designed Layout</span>
+              </div>
+
+              {/* Card 5 */}
+              <div className={styles.highlightItem}>
+                <div className={styles.highlightIconBox}>
+                  <TrendingUp size={22} />
+                </div>
+                <strong>Great Location</strong>
+                <span>Future Growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          SECTION 4: LIFESTYLE BANNER (from SS2)
+          ======================================================== */}
+      <section className={styles.sectionLifestyle}>
+        <div className={styles.lifestyleBanner}>
+          <div className={styles.lifestyleOverlay} />
+          <div className="container">
+            <div className={styles.lifestyleContent}>
+              <h2 className={styles.lifestyleTitle}>
+                A BETTER TOMORROW IN JAIPUR
+              </h2>
+              <span className={styles.lifestyleSubtitle}>
+                MODERN LIVING BEGINS HERE
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          SECTION 5: OUR LOCATION (from SS2)
+          ======================================================== */}
+      <section className={styles.sectionLocation}>
+        <div className="container">
+          <div className={styles.locationCard}>
+            <div className={styles.locationLeft}>
+              <span className="section-tag">OUR LOCATION</span>
+              <h2>Moulasar, Jaipur</h2>
+              <p className={styles.locationDesc}>
+                A well-connected location with a bright future.
+              </p>
+              <a
+                href="https://maps.google.com/?q=Maulasar+Rajasthan"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-mockup-secondary"
+              >
+                <span>Get Directions</span>
+                <ArrowRight size={16} />
+              </a>
+            </div>
+
+            <div className={styles.locationRight}>
+              <img
+                src="/images/location-road.png"
+                alt="Moulasar Jaipur Location Road Network"
+                className={styles.locationRoadImg}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          SECTION 6: GALLERY SECTION (from SS2)
+          ======================================================== */}
+      <section id="gallery" className={styles.sectionGallery}>
+        <div className="container">
+          <span className="section-tag-center">GALLERY SECTION</span>
+
+          <div className={styles.gallerySlider}>
+            <div className={styles.galleryCard}>
+              <img src="/images/gallery-1.jpg" alt="Gallery 1" className={styles.galleryImg} />
+            </div>
+            <div className={styles.galleryCard}>
+              <img src="/images/gallery-2.jpg" alt="Gallery 2" className={styles.galleryImg} />
+            </div>
+            <div className={styles.galleryCard}>
+              <img src="/images/gallery-3.jpg" alt="Gallery 3" className={styles.galleryImg} />
+            </div>
+            <div className={styles.galleryCard}>
+              <img src="/images/gallery-4.jpg" alt="Gallery 4" className={styles.galleryImg} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          SECTION 7: CONTACT CTA & INQUIRY FORM (from SS2)
+          ======================================================== */}
+      <section id="contact" className={styles.sectionContactCta}>
+        <div className="container">
+          {/* Top Full Width Banner from SS2 */}
+          <div className={styles.ctaBanner}>
+            <div className={styles.ctaBannerLeft}>
+              <h3>Have Questions? Get in Touch With Us</h3>
+              <p>For more information about the project, site visit or investment details.</p>
+            </div>
+            <a href="tel:9461051515" className="btn-mockup-primary">
+              <Phone size={18} />
+              <span>9461051515</span>
+              <ArrowRight size={18} />
+            </a>
+          </div>
+
+          {/* Form + Gate Visual Grid from SS2 */}
+          <div className={styles.contactGrid}>
+            <div className={styles.formBox}>
+              <span className="section-tag">GET IN TOUCH</span>
+              <h4>Request Information & Site Visit</h4>
+              <p>For more information about the project.</p>
+
+              {!formSent ? (
+                <form onSubmit={handleFormSubmit} className={styles.actualForm}>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Name"
+                    value={contactData.name}
+                    onChange={(e) => setContactData({ ...contactData, name: e.target.value })}
+                    className={styles.formInput}
+                  />
+                  <input
+                    type="tel"
+                    required
+                    placeholder="Phone Number"
+                    value={contactData.phone}
+                    onChange={(e) => setContactData({ ...contactData, phone: e.target.value })}
+                    className={styles.formInput}
+                  />
+                  <textarea
+                    rows={3}
+                    placeholder="Message (Optional)"
+                    value={contactData.message}
+                    onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
+                    className={styles.formTextarea}
+                  />
+                  <button type="submit" className="btn-mockup-primary" style={{ width: "100%", marginTop: "6px" }}>
+                    <span>Send Message</span>
+                    <ArrowRight size={16} />
+                  </button>
+                </form>
+              ) : (
+                <div style={{ background: "#FDFBF1", border: "1px solid #E8DCC5", borderRadius: "10px", padding: "20px", textAlign: "center" }}>
+                  <strong style={{ color: "#8B603D", display: "block", fontSize: "1.1rem" }}>
+                    Thank you, {contactData.name}!
+                  </strong>
+                  <p style={{ color: "#6B7280", fontSize: "0.9rem", marginTop: "4px" }}>
+                    Our sales advisor will call you at {contactData.phone} within 15 minutes.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className={styles.contactVisualWrapper}>
+              <img
+                src="/images/contact-gate.png"
+                alt="Mojika Group Gate"
+                className={styles.contactGatePhoto}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Modals */}
+      {visitModalOpen && (
+        <ScheduleVisitModal isOpen={visitModalOpen} onClose={() => setVisitModalOpen(false)} />
+      )}
       {bannerModalOpen && (
         <BannerModal isOpen={bannerModalOpen} onClose={() => setBannerModalOpen(false)} />
-      )}
-      {visitModalOpen && (
-        <ScheduleVisitModal
-          isOpen={visitModalOpen}
-          onClose={() => setVisitModalOpen(false)}
-          defaultProject={selectedPlotForVisit}
-        />
       )}
     </>
   );
