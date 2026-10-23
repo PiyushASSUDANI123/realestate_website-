@@ -366,6 +366,213 @@ export default function HomePage() {
 
 
       {/* ========================================================
+          NEW SECTION A: 30+ WORLD-CLASS AMENITIES SHOWCASE
+          ======================================================== */}
+      <section className={styles.sectionAmenitiesShowcase}>
+        <div className="container">
+          <div className={styles.amenitiesSectionHeader}>
+            <div>
+              <span className="section-tag">ROYAL LIFESTYLE</span>
+              <h2>30+ World-Class Amenities & Club Mojika</h2>
+              <p>Experience an elevated standard of leisure, sports, and holistic wellness right at your doorstep.</p>
+            </div>
+            <Link href="/amenities" className="btn-mockup-primary">
+              <span>Explore All 30+ Amenities</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className={styles.amenitiesCardGrid}>
+            <div className={styles.amenityShowcaseCard}>
+              <div className={styles.amenityCardImgWrap}>
+                <img src="/images/clubhouse.jpg" alt="Club Mojika" />
+                <span className={styles.amenityCardBadge}>25,000 Sq.Ft.</span>
+              </div>
+              <div className={styles.amenityCardContent}>
+                <h3>Club Mojika & Lounge</h3>
+                <p>Private banquet hall, member café, indoor billiards lounge, and mini-theatre.</p>
+              </div>
+            </div>
+
+            <div className={styles.amenityShowcaseCard}>
+              <div className={styles.amenityCardImgWrap}>
+                <img src="/images/lifestyle.jpg" alt="Infinity Pool" />
+                <span className={styles.amenityCardBadge}>Olympic Length</span>
+              </div>
+              <div className={styles.amenityCardContent}>
+                <h3>Infinity Swimming Pool</h3>
+                <p>Temperature-controlled pool with private cabanas, sundeck loungers, and kids splash bay.</p>
+              </div>
+            </div>
+
+            <div className={styles.amenityShowcaseCard}>
+              <div className={styles.amenityCardImgWrap}>
+                <img src="/images/plots.jpg" alt="60-Ft Wide Avenues" />
+                <span className={styles.amenityCardBadge}>Wide Blacktop</span>
+              </div>
+              <div className={styles.amenityCardContent}>
+                <h3>60-Ft Tree-Lined Avenues</h3>
+                <p>Spacious asphalt roads, underground electrical conduits, and automated solar streetlamps.</p>
+              </div>
+            </div>
+
+            <div className={styles.amenityShowcaseCard}>
+              <div className={styles.amenityCardImgWrap}>
+                <img src="/images/gate.jpg" alt="3-Tier Security" />
+                <span className={styles.amenityCardBadge}>24/7 Gated</span>
+              </div>
+              <div className={styles.amenityCardContent}>
+                <h3>3-Tier Smart Security</h3>
+                <p>AI night-vision CCTV coverage, RFID boom barriers, and round-the-clock trained security guards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          NEW SECTION B: LIVE CONSTRUCTION & DEVELOPMENT TIMELINE
+          ======================================================== */}
+      <section className={styles.sectionProgressTimeline}>
+        <div className="container">
+          <div className={styles.progressHeader}>
+            <span className="section-tag-center">ON-GROUND REALITY</span>
+            <h2>Live Construction & Development Milestones</h2>
+            <p>Our commitment to transparent, fast-track execution in the 100-Bigha township.</p>
+          </div>
+
+          <div className={styles.timelineRow}>
+            <div className={styles.timelineStepCard}>
+              <div className={styles.timelineStatusCompleted}>100% Done</div>
+              <h4>Phase 1: Boundary & Demarcation</h4>
+              <p>Perimeter boundary wall, individual plot stone demarcations, and legal survey pillars.</p>
+            </div>
+
+            <div className={styles.timelineStepCard}>
+              <div className={styles.timelineStatusCompleted}>100% Done</div>
+              <h4>Phase 2: Grand Entrance Gate</h4>
+              <p>Majestic stone archway, guard cabins, and dual entry/exit boom barriers completed.</p>
+            </div>
+
+            <div className={styles.timelineStepCard}>
+              <div className={styles.timelineStatusCompleted}>100% Done</div>
+              <h4>Phase 3: 60-Ft Main Avenues</h4>
+              <p>Heavy-duty asphalt blacktop roads, concrete curbs, and stormwater drain channels.</p>
+            </div>
+
+            <div className={styles.timelineStepCard}>
+              <div className={styles.timelineStatusProgress}>85% In Progress</div>
+              <h4>Phase 4: Underground Utilities</h4>
+              <p>Underground cabling, high-pressure water supply lines, and solar streetlight poles.</p>
+            </div>
+
+            <div className={styles.timelineStepCard}>
+              <div className={styles.timelineStatusProgress}>65% In Progress</div>
+              <h4>Phase 5: Club Mojika & Parks</h4>
+              <p>Clubhouse structural work, pool excavation, and landscaped botanical planting.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          NEW SECTION C: BANK TIE-UPS & 80% LOAN SANCTION
+          ======================================================== */}
+      <section className={styles.sectionBankTieups}>
+        <div className="container">
+          <div className={styles.bankBanner}>
+            <div className={styles.bankBannerLeft}>
+              <span className={styles.bankTag}>FINANCIAL SECURITY</span>
+              <h2>Approved by Top National Banks (Up to 80% Loan)</h2>
+              <p>Pre-sanctioned clear titles enable seamless, expedited home loan approvals with attractive interest rates.</p>
+            </div>
+            <Link href="/investment" className="btn-mockup-primary">
+              <span>View Investment Potential</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className={styles.bankPartnersGrid}>
+            <div className={styles.bankPillCard}>
+              <strong>SBI</strong>
+              <span>State Bank of India</span>
+            </div>
+            <div className={styles.bankPillCard}>
+              <strong>HDFC</strong>
+              <span>HDFC Bank Home Loans</span>
+            </div>
+            <div className={styles.bankPillCard}>
+              <strong>ICICI</strong>
+              <span>ICICI Bank Pre-Approved</span>
+            </div>
+            <div className={styles.bankPillCard}>
+              <strong>BOB</strong>
+              <span>Bank of Baroda</span>
+            </div>
+            <div className={styles.bankPillCard}>
+              <strong>PNB</strong>
+              <span>PNB Housing Finance</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          NEW SECTION D: VERIFIED INVESTOR TESTIMONIALS
+          ======================================================== */}
+      <section className={styles.sectionTestimonials}>
+        <div className="container">
+          <div className={styles.testimonialsHeader}>
+            <span className="section-tag-center">CLIENT VOICES</span>
+            <h2>Trusted by 1,200+ Happy Homeowners & Investors</h2>
+            <p>Real stories of trust, wealth creation, and community living with Mojika Group.</p>
+          </div>
+
+          <div className={styles.testimonialCardsGrid}>
+            <div className={styles.testimonialCard}>
+              <div className={styles.starRow}>★★★★★</div>
+              <p className={styles.reviewQuote}>
+                "I purchased a 300 Sq.Yd plot in Sector A. The 60-ft wide roads, underground electricity,
+                and prompt freehold registry were beyond my expectations. Mojika Group has delivered on every promise."
+              </p>
+              <div className={styles.buyerInfo}>
+                <strong>Rajesh Khandelwal</strong>
+                <span>Businessman, Jaipur • Verified Buyer</span>
+              </div>
+            </div>
+
+            <div className={styles.testimonialCard}>
+              <div className={styles.starRow}>★★★★★</div>
+              <p className={styles.reviewQuote}>
+                "As an NRI based in Dubai, transparent legal paperwork and RERA registration were my top priorities.
+                The team provided end-to-end video updates. In just 18 months, my plot value has appreciated by 28%!"
+              </p>
+              <div className={styles.buyerInfo}>
+                <strong>Vikramaditya Rathore</strong>
+                <span>NRI Investor, Dubai • Sector B Owner</span>
+              </div>
+            </div>
+
+            <div className={styles.testimonialCard}>
+              <div className={styles.starRow}>★★★★★</div>
+              <p className={styles.reviewQuote}>
+                "The peaceful green environment, clubhouse facilities, and proximity to the highway made Mojika Maulasar
+                the perfect location for our family's retirement dream villa."
+              </p>
+              <div className={styles.buyerInfo}>
+                <strong>Dr. Sunita Meena</strong>
+                <span>Senior Physician, Sikar • Sector C Owner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
           SECTION 7: CONTACT CTA & INQUIRY FORM (from SS2)
           ======================================================== */}
       <section id="contact" className={styles.sectionContactCta}>

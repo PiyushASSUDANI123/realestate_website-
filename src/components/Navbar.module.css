@@ -48,13 +48,13 @@
 .navMenu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .navLink {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: #2F3542;
   text-transform: uppercase;
   transition: color 0.2s ease;

@@ -728,6 +728,366 @@
 
 
 /* ========================================================
+   SECTION A: AMENITIES SHOWCASE
+   ======================================================== */
+.sectionAmenitiesShowcase {
+  padding: 80px 0 90px;
+  background-color: var(--color-ivory);
+}
+
+.amenitiesSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.amenitiesSectionHeader h2 {
+  font-size: 2.2rem;
+  color: var(--color-charcoal);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.amenitiesSectionHeader p {
+  color: #4B5563;
+  font-size: 1rem;
+}
+
+.amenitiesCardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.amenityShowcaseCard {
+  background: #FFFFFF;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.amenityShowcaseCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-brown);
+  box-shadow: 0 14px 35px rgba(139, 96, 61, 0.12);
+}
+
+.amenityCardImgWrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.amenityCardImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.amenityShowcaseCard:hover .amenityCardImgWrap img {
+  transform: scale(1.06);
+}
+
+.amenityCardBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(21, 26, 36, 0.85);
+  backdrop-filter: blur(8px);
+  color: #DFBA5C;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(223, 186, 92, 0.35);
+}
+
+.amenityCardContent {
+  padding: 20px;
+}
+
+.amenityCardContent h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  margin-bottom: 8px;
+}
+
+.amenityCardContent p {
+  font-size: 0.86rem;
+  color: #4B5563;
+  line-height: 1.5;
+}
+
+
+/* ========================================================
+   SECTION B: CONSTRUCTION PROGRESS
+   ======================================================== */
+.sectionProgressTimeline {
+  padding: 80px 0;
+  background-color: #FAF8F2;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.progressHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.progressHeader h2 {
+  font-size: 2.2rem;
+  color: var(--color-charcoal);
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.progressHeader p {
+  color: #4B5563;
+  font-size: 1rem;
+}
+
+.timelineRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.timelineStepCard {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 22px 18px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.timelineStepCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-brown);
+}
+
+.timelineStatusCompleted {
+  display: inline-block;
+  background: rgba(22, 163, 74, 0.1);
+  color: #16A34A;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.timelineStatusProgress {
+  display: inline-block;
+  background: rgba(202, 138, 4, 0.1);
+  color: #CA8A04;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.timelineStepCard h4 {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.timelineStepCard p {
+  font-size: 0.82rem;
+  color: #4B5563;
+  line-height: 1.45;
+}
+
+
+/* ========================================================
+   SECTION C: BANK TIE-UPS
+   ======================================================== */
+.sectionBankTieups {
+  padding: 70px 0 80px;
+  background-color: var(--color-ivory);
+}
+
+.bankBanner {
+  background: linear-gradient(135deg, #1C2330 0%, #121822 100%);
+  border-radius: 20px;
+  padding: 36px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  flex-wrap: wrap;
+}
+
+.bankTag {
+  display: inline-block;
+  background: rgba(223, 186, 92, 0.15);
+  color: #DFBA5C;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 4px 12px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+}
+
+.bankBannerLeft h2 {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.bankBannerLeft p {
+  color: #CBD5E1;
+  font-size: 0.95rem;
+}
+
+.bankPartnersGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.bankPillCard {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.bankPillCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-brown);
+}
+
+.bankPillCard strong {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-brown);
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.bankPillCard span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-slate);
+  font-weight: 600;
+}
+
+
+/* ========================================================
+   SECTION D: TESTIMONIALS
+   ======================================================== */
+.sectionTestimonials {
+  padding: 80px 0 100px;
+  background-color: #FAF8F2;
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonialsHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.testimonialsHeader h2 {
+  font-size: 2.2rem;
+  color: var(--color-charcoal);
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.testimonialsHeader p {
+  color: #4B5563;
+  font-size: 1rem;
+}
+
+.testimonialCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.testimonialCard {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 32px 28px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-brown);
+  box-shadow: 0 14px 35px rgba(139, 96, 61, 0.12);
+}
+
+.starRow {
+  color: #EAB308;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.reviewQuote {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.buyerInfo {
+  border-top: 1px solid #F1EFE6;
+  padding-top: 14px;
+}
+
+.buyerInfo strong {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  line-height: 1.2;
+}
+
+.buyerInfo span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-brown);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+
+/* ========================================================
    RESPONSIVE
    ======================================================== */
 @media (max-width: 1024px) {

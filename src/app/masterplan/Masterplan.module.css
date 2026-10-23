@@ -1,0 +1,344 @@
+.pageWrapper {
+  padding-top: 90px;
+  background-color: var(--color-ivory);
+  min-height: 100vh;
+}
+
+.heroHeader {
+  padding: 60px 0 30px;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: var(--color-charcoal);
+  margin-top: 14px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+/* Masterplan Visual Card */
+.masterVisualSection {
+  padding: 20px 0 60px;
+}
+
+.visualCard {
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+}
+
+.visualHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.visualBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(139, 96, 61, 0.1);
+  color: var(--color-brown);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.downloadBrochureBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-brown);
+  color: #FFFFFF;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(139, 96, 61, 0.25);
+}
+
+.downloadBrochureBtn:hover {
+  background: var(--color-brown-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(139, 96, 61, 0.35);
+}
+
+.mainMapWrapper {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 480px;
+}
+
+.masterMapImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mapOverlayNotice {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(21, 26, 36, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Sector Section */
+.sectorSection {
+  padding: 40px 0 80px;
+}
+
+.sectorGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.sectorNav h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  margin-bottom: 20px;
+}
+
+.sectorList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectorTab {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.sectorTab:hover {
+  border-color: var(--color-brown);
+  transform: translateX(4px);
+}
+
+.sectorTabActive {
+  background: var(--color-brown);
+  border-color: var(--color-brown);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(139, 96, 61, 0.25);
+}
+
+.sectorTab strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.sectorTab span {
+  display: block;
+  font-size: 0.82rem;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.sectorTabActive span {
+  color: #F3E8DF;
+}
+
+.sectorDetailCard {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sectorStatusBadge {
+  display: inline-block;
+  background: rgba(22, 163, 74, 0.1);
+  color: #16A34A;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.detailHeader h2 {
+  font-size: 1.8rem;
+  color: var(--color-charcoal);
+  margin-bottom: 16px;
+}
+
+.specPillRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.specPill {
+  background: #FAF8F2;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: #4B5563;
+}
+
+.specPill strong {
+  color: var(--color-brown);
+}
+
+.sectorDesc {
+  font-size: 0.95rem;
+  color: #4B5563;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.sectorFeatures h4 {
+  font-size: 1rem;
+  color: var(--color-charcoal);
+  margin-bottom: 14px;
+}
+
+.featuresList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.checkIcon {
+  color: var(--color-brown);
+  flex-shrink: 0;
+}
+
+/* Specs Grid */
+.specsSection {
+  padding: 40px 0 100px;
+}
+
+.specsHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.specsHeader h2 {
+  font-size: 2.1rem;
+  color: var(--color-charcoal);
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.specsHeader p {
+  color: #4B5563;
+  font-size: 0.95rem;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.specCard {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 32px 26px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.specCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-brown);
+  box-shadow: 0 12px 30px rgba(139, 96, 61, 0.12);
+}
+
+.specIcon {
+  color: var(--color-brown);
+  margin-bottom: 16px;
+}
+
+.specCard h3 {
+  font-size: 1.2rem;
+  color: var(--color-charcoal);
+  margin-bottom: 10px;
+}
+
+.specCard p {
+  font-size: 0.88rem;
+  color: #4B5563;
+  line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sectorGrid {
+    grid-template-columns: 1fr;
+  }
+  .specsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .specsGrid {
+    grid-template-columns: 1fr;
+  }
+  .featuresList {
+    grid-template-columns: 1fr;
+  }
+  .mainMapWrapper {
+    height: 300px;
+  }
+  .sectorDetailCard {
+    padding: 24px;
+  }
+}

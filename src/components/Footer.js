@@ -44,9 +44,11 @@ export default function Footer() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Mojika Group</Link></li>
               <li><Link href="/projects">Flagship Projects</Link></li>
-              <li><Link href="/#gallery">Township Gallery</Link></li>
-              <li><Link href="/contact">Book Site Visit</Link></li>
-              <li><Link href="/contact#faq">Frequently Asked Questions</Link></li>
+              <li><Link href="/amenities">Club & Amenities</Link></li>
+              <li><Link href="/investment">Investment & ROI</Link></li>
+              <li><Link href="/masterplan">100-Bigha Masterplan</Link></li>
+              <li><Link href="/rera-legal">RERA & Legal Verification</Link></li>
+              <li><Link href="/contact">Book Free Cab Site Visit</Link></li>
             </ul>
           </div>
 
