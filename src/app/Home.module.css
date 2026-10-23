@@ -40,7 +40,7 @@
   letter-spacing: -0.02em;
 }
 
-.heroHindiTagline {
+.heroSubTagline {
   display: block;
   font-family: var(--font-sans);
   font-size: 1.35rem;
@@ -211,7 +211,7 @@
   padding: 40px;
 }
 
-.bannerHindiHeading {
+.bannerHeading {
   font-size: 1.8rem;
   color: #0f172a;
   line-height: 1.3;

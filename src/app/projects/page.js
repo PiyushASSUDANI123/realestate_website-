@@ -23,7 +23,7 @@ const projectsData = [
   {
     id: "maulasar",
     title: "Mojika Grand Township",
-    hindiSub: "100 बीघा में फैली सपनों की नगरी",
+    subtitle: "A 100-Bigha Master-Planned Dream Township",
     category: "Mega Townships",
     scale: "100+ Bigha Integrated Township",
     location: "State Highway, Maulasar (Rajasthan)",
@@ -46,7 +46,7 @@ const projectsData = [
   {
     id: "royal-meadows",
     title: "Mojika Royal Meadows",
-    hindiSub: "राजसी जीवनशैली और हरियाली का संगम",
+    subtitle: "Where Regal Heritage Meets Lush Green Living",
     category: "Plotted Communities",
     scale: "35 Bigha Plotted Enclave",
     location: "Tonk Road Growth Corridor, Jaipur",
@@ -68,7 +68,7 @@ const projectsData = [
   {
     id: "serene-greens",
     title: "Mojika Serene Greens",
-    hindiSub: "प्रकृति की गोद में विला प्लॉट्स",
+    subtitle: "Eco-Luxury Villa Estates in the Lap of Nature",
     category: "Plotted Communities",
     scale: "25 Bigha Eco-Community",
     location: "Main Sikar Road, Jaipur",
@@ -90,7 +90,7 @@ const projectsData = [
   {
     id: "imperial-villas",
     title: "Mojika Imperial Mansions",
-    hindiSub: "आधुनिक वास्तुकला से सुसज्जित विला",
+    subtitle: "Turnkey Modern Architectural Masterpieces",
     category: "Luxury Villas",
     scale: "Boutique Villa Enclave",
     location: "Mansarovar Extension, Jaipur",

@@ -63,8 +63,8 @@ export default function HomePage() {
 
               <h1 className={styles.heroTitle}>
                 Curating Generational Legacies.
-                <span className={styles.heroHindiTagline}>
-                  अब मौलासर में मिलेगा जयपुर जैसा मॉडर्न लाइफस्टाइल — 100 बीघा में फैली सपनों की नगरी!
+                <span className={styles.heroSubTagline}>
+                  Bringing Jaipur&apos;s Elite Modern Living to Maulasar — A 100-Bigha Dream Township
                 </span>
               </h1>
 
@@ -149,8 +149,8 @@ export default function HomePage() {
               <div className="badge-emerald">
                 <Award size={14} /> Mega Township Launch • Maulasar
               </div>
-              <h2 className={styles.bannerHindiHeading}>
-                अब मौलासर में मिलेगा जयपुर जैसा मॉडर्न लाइफस्टाइल
+              <h2 className={styles.bannerHeading}>
+                Bringing Jaipur&apos;s Elite Modern Living to Maulasar
               </h2>
               <p className={styles.bannerSubtext}>
                 Mojika Group brings the signature luxury, security, and world-class infrastructure

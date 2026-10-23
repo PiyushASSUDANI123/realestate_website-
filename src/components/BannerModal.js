@@ -29,7 +29,7 @@ export default function BannerModal({ isOpen, onClose }) {
           </div>
           <h2>Mojika Group • Maulasar Flagship Township</h2>
           <p>
-            अब मौलासर में मिलेगा जयपुर जैसा मॉडर्न लाइफस्टाइल — 100 बीघा में फैली सपनों की नगरी!
+            Experience Jaipur-grade modern lifestyle in Maulasar — A 100-Bigha master-planned sanctuary of prosperity!
           </p>
         </div>
 
