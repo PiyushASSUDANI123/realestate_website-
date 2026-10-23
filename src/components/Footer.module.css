@@ -1,0 +1,267 @@
+.footer {
+  background: #090e18;
+  color: #94a3b8;
+  border-top: 1px solid rgba(197, 152, 40, 0.2);
+  margin-top: auto;
+}
+
+.preFooter {
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.preFooterCard {
+  background: linear-gradient(135deg, #111a2e 0%, #17243c 100%);
+  border: 1px solid rgba(197, 152, 40, 0.35);
+  border-radius: 16px;
+  padding: 36px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.preFooterLeft h3 {
+  color: #ffffff;
+  font-size: 1.65rem;
+  margin: 10px 0 6px;
+}
+
+.preFooterLeft p {
+  color: #c9d2e3;
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+.preFooterRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.mainFooter {
+  padding: 60px 0 24px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1fr 1.3fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+/* Brand */
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.emblem {
+  width: 42px;
+  height: 42px;
+  background: #152033;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(197, 152, 40, 0.4);
+}
+
+.brandName {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+}
+
+.brandSlogan {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #dfba5c;
+  font-weight: 700;
+}
+
+.brandDesc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.reraBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 76, 58, 0.2);
+  border: 1px solid rgba(15, 76, 58, 0.4);
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #4ade80;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Links */
+.colTitle {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.colTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--gold-primary);
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkList li a {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: block;
+}
+
+.linkList li a:hover {
+  color: #dfba5c;
+  transform: translateX(4px);
+}
+
+.linkList li a strong {
+  display: block;
+  color: #f1f5f9;
+  font-size: 0.92rem;
+}
+
+.linkList li a span {
+  display: block;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+/* Contacts */
+.contactIntro {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.phoneList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  background: #141f33;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 9px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.phoneLink:hover {
+  background: var(--gold-primary);
+  color: #ffffff;
+  border-color: var(--gold-primary);
+}
+
+.addressBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.addressItem {
+  display: flex;
+  gap: 10px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.addrIcon {
+  color: #dfba5c;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.addressItem strong {
+  display: block;
+  color: #f1f5f9;
+}
+
+.addressItem p {
+  color: #94a3b8;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.bottomRight {
+  display: flex;
+  gap: 12px;
+  color: #64748b;
+}
+
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .preFooterCard {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .bottomBar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .preFooterRight {
+    flex-direction: column;
+    width: 100%;
+  }
+  .preFooterRight a, .preFooterRight button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,222 @@
+.container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.triggers {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.floatBtnWa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.floatBtnWa:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
+  color: #ffffff;
+}
+
+.badgeLabel {
+  display: inline-block;
+}
+
+.floatBtnPhone {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #c59828;
+  border: 1px solid rgba(197, 152, 40, 0.4);
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.floatBtnPhone:hover {
+  background: #1e293b;
+  transform: translateY(-3px);
+  color: #dfba5c;
+}
+
+/* Popup */
+.popup {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(197, 152, 40, 0.25);
+  overflow: hidden;
+  animation: popEnter 0.25s ease-out;
+}
+
+@keyframes popEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.popupHeader {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.onlineDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.headerInfo strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #f8fafc;
+}
+
+.headerInfo p {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.popupClose {
+  background: transparent;
+  color: #94a3b8;
+  padding: 4px;
+}
+
+.popupClose:hover {
+  color: #ffffff;
+}
+
+.popupBody {
+  padding: 16px;
+}
+
+.helpText {
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.buttonList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.waBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.waBtn:hover {
+  opacity: 0.9;
+}
+
+.callOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 10px;
+}
+
+.callLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.callLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.callLink small {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.callLink:hover {
+  border-color: #c59828;
+  background: #fdfaf3;
+  color: #997416;
+}
+
+@media (max-width: 576px) {
+  .badgeLabel {
+    display: none;
+  }
+  .floatBtnWa {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .container {
+    bottom: 20px;
+    right: 20px;
+  }
+}

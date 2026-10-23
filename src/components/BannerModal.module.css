@@ -1,0 +1,175 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 13, 23, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.modal {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(197, 152, 40, 0.3);
+  max-height: 92vh;
+  overflow-y: auto;
+  animation: modalEnter 0.25s ease-out;
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.bannerHeader {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bannerHeader h2 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin: 12px 0 6px;
+}
+
+.bannerHeader p {
+  color: #526077;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.imageContainer {
+  background: #0f172a;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(197, 152, 40, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin-bottom: 24px;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.detailsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.detailCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.detailLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.detailValue {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.phonesSection {
+  background: #fdfaf3;
+  border: 1px solid rgba(197, 152, 40, 0.3);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.phonesTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #835e07;
+  margin-bottom: 12px;
+}
+
+.phoneGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.phonePill {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.phonePill:hover {
+  background: #c59828;
+  color: #ffffff;
+  border-color: #c59828;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .detailsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal {
+    padding: 20px;
+  }
+  .bannerHeader h2 {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,266 @@
+.headerSection {
+  background: linear-gradient(135deg, #090e18 0%, #141c2c 100%);
+  color: #ffffff;
+  padding: 70px 0 60px;
+  text-align: center;
+  border-bottom: 1px solid rgba(197, 152, 40, 0.25);
+}
+
+.headerSection h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 12px 0 16px;
+}
+
+.headerSection p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Filter Controls */
+.filterBar {
+  background: #ffffff;
+  padding: 24px 0;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 76px;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.filterInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 9px 18px;
+  border-radius: 30px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  border-color: #c59828;
+  color: #997416;
+}
+
+.filterBtnActive {
+  background: #0f172a;
+  color: #dfba5c;
+  border-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.statsCount {
+  font-size: 0.88rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Projects Grid */
+.projectsSection {
+  padding: 60px 0 90px;
+  background: #fbfaf8;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+}
+
+.projectCard {
+  background: #ffffff;
+  border: 1px solid rgba(197, 152, 40, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(197, 152, 40, 0.45);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+}
+
+.projectMedia {
+  position: relative;
+  height: 290px;
+  overflow: hidden;
+  background: #0c121e;
+}
+
+.projectImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.projectCard:hover .projectImg {
+  transform: scale(1.05);
+}
+
+.statusBadge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(12, 18, 30, 0.85);
+  backdrop-filter: blur(8px);
+  color: #dfba5c;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid rgba(197, 152, 40, 0.4);
+}
+
+.locationBadge {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.projectBody {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projectScale {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c59828;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.projectTitle {
+  font-size: 1.55rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.projectDesc {
+  color: #526077;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 22px;
+}
+
+.specItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.specLabel {
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.specVal {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 2px;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.feat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.projectActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+  .headerSection h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .specsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+  }
+  .specItem {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .projectActions {
+    flex-direction: column;
+  }
+  .projectActions button, .projectActions a {
+    width: 100%;
+  }
+}

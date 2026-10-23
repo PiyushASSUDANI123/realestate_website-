@@ -1,0 +1,262 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 28, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.modal {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 580px;
+  padding: 36px;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(197, 152, 40, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalEnter 0.25s ease-out;
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  font-size: 1.75rem;
+  margin: 10px 0 8px;
+  color: #0f172a;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #0f172a;
+  background: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: #c59828;
+  box-shadow: 0 0 0 3px rgba(197, 152, 40, 0.15);
+  background: #ffffff;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cabCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fdfaf3;
+  border: 1px solid rgba(197, 152, 40, 0.35);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 4px;
+}
+
+.cabLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cabIcon {
+  color: #c59828;
+  flex-shrink: 0;
+}
+
+.cabTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: block;
+}
+
+.cabDesc {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #c59828;
+  cursor: pointer;
+}
+
+.directHelpline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.directHelpline strong {
+  color: #1e293b;
+}
+
+/* Success */
+.successState {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #e8f5ed;
+  margin-bottom: 20px;
+}
+
+.successState h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.successState p {
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.successPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef8ee;
+  border: 1px solid rgba(197, 152, 40, 0.4);
+  color: #92690d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 18px 0;
+}
+
+.helplineBox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.helplineBox p {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.numberRow {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.numberRow a {
+  font-weight: 700;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.numberRow a:hover {
+  border-color: #c59828;
+  color: #997416;
+}
+
+@media (max-width: 540px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .modal {
+    padding: 24px 18px;
+  }
+}
