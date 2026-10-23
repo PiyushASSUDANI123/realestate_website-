@@ -1,0 +1,379 @@
+.container {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.topHeader h3 {
+  font-size: 2.1rem;
+  color: #0f172a;
+  margin: 10px 0 6px;
+}
+
+.topHeader p {
+  color: #64748b;
+  font-size: 0.98rem;
+  max-width: 620px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #faf8f5;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #e8e3d8;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dotAvailable {
+  background: #10b981;
+}
+
+.dotReserved {
+  background: #f59e0b;
+}
+
+.dotSold {
+  background: #94a3b8;
+}
+
+/* Sector Tabs */
+.sectorTabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.sectorBtn {
+  background: #faf8f5;
+  border: 1px solid #e8e3d8;
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-align: left;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectorBtn span {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.sectorBtn small {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.sectorBtn:hover {
+  border-color: #b88a29;
+  background: #ffffff;
+}
+
+.sectorBtnActive {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+}
+
+.sectorBtnActive span {
+  color: #ffffff;
+}
+
+.sectorBtnActive small {
+  color: #dfba5c;
+}
+
+/* Main Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Plots Card */
+.plotsCard {
+  background: #fcfbf9;
+  border: 1px solid #ebe5d8;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.roadIndicator {
+  background: #e2e8f0;
+  border: 1px dashed #94a3b8;
+  border-radius: 6px;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.plotsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.plotTile {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.plotTile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.plotTileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plotNumber {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.plotStatusPill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.plotAvailable .plotStatusPill {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.plotReserved .plotStatusPill {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.plotSold .plotStatusPill {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.plotTileBody {
+  margin: 6px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.plotTileBody strong {
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.plotTileBody span {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.plotTag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #b88a29;
+}
+
+/* Selected */
+.plotSelected {
+  border: 2px solid #b88a29;
+  background: #fffdf9;
+  box-shadow: 0 0 0 3px rgba(184, 138, 41, 0.15);
+}
+
+.plotSold {
+  opacity: 0.65;
+}
+
+.plotGuideText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Inspector */
+.inspectorCard {
+  background: #ffffff;
+  border: 1px solid rgba(184, 138, 41, 0.25);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.inspectorTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 18px;
+}
+
+.inspectorSector {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #b88a29;
+  font-weight: 700;
+  display: block;
+}
+
+.inspectorTop h4 {
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.statusBadge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badgeAvail {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.badgeRes {
+  background: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.badgeSold {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.specsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.specRow span {
+  color: #64748b;
+}
+
+.specRow strong {
+  color: #0f172a;
+}
+
+.inspectorFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  background: #fcfbf8;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #eee8db;
+}
+
+.featItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.soldNote {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.82rem;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 14px;
+}
+
+@media (max-width: 992px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+  .plotsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .plotsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    padding: 20px 14px;
+  }
+}

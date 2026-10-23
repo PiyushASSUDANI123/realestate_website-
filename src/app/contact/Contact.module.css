@@ -1,137 +1,137 @@
 .headerSection {
-  background: linear-gradient(135deg, #090e18 0%, #141c2c 100%);
-  color: #ffffff;
-  padding: 70px 0 60px;
+  background: #faf8f5;
+  color: #0f172a;
+  padding: 60px 0 50px;
   text-align: center;
-  border-bottom: 1px solid rgba(197, 152, 40, 0.25);
+  border-bottom: 1px solid rgba(184, 138, 41, 0.18);
 }
 
 .headerSection h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  margin: 12px 0 16px;
+  font-size: 2.8rem;
+  color: #0f172a;
+  margin: 12px 0 14px;
 }
 
 .headerSection p {
-  color: #94a3b8;
-  font-size: 1.1rem;
-  max-width: 720px;
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 .section {
-  padding: 80px 0;
-  background: #fbfaf8;
+  padding: 70px 0;
+  background: #ffffff;
 }
 
 .contactLayout {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
-  gap: 40px;
+  gap: 36px;
   align-items: start;
 }
 
 /* Form Card */
 .formCard {
   background: #ffffff;
-  border: 1px solid rgba(197, 152, 40, 0.25);
-  border-radius: 18px;
-  padding: 40px;
-  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+  border: 1px solid #ebe5d8;
+  border-radius: 14px;
+  padding: 36px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
 }
 
 .formCard h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: #0f172a;
-  margin: 10px 0 8px;
+  margin: 8px 0 6px;
 }
 
 .formCard p {
   color: #64748b;
-  font-size: 0.95rem;
-  margin-bottom: 24px;
+  font-size: 0.92rem;
+  margin-bottom: 22px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .formGroup label {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: #334155;
 }
 
 .input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 11px 14px;
   border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 0.95rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
   font-family: inherit;
   color: #0f172a;
-  background: #f8fafc;
+  background: #fcfbf9;
   outline: none;
   transition: all 0.2s ease;
 }
 
 .input:focus {
-  border-color: #c59828;
-  box-shadow: 0 0 0 3px rgba(197, 152, 40, 0.15);
+  border-color: #b88a29;
+  box-shadow: 0 0 0 3px rgba(184, 138, 41, 0.15);
   background: #ffffff;
 }
 
 .grid2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 12px;
 }
 
 .cabCard {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fdfaf3;
-  border: 1px solid rgba(197, 152, 40, 0.35);
-  border-radius: 10px;
-  padding: 14px 16px;
+  background: #fbf8f0;
+  border: 1px solid rgba(184, 138, 41, 0.3);
+  border-radius: 8px;
+  padding: 12px 14px;
 }
 
 .cabLeft {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .cabIcon {
-  color: #c59828;
+  color: #b88a29;
 }
 
 .cabTitle {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #0f172a;
   display: block;
 }
 
 .cabDesc {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: #64748b;
   margin: 0;
 }
 
 .checkbox {
-  width: 20px;
-  height: 20px;
-  accent-color: #c59828;
+  width: 18px;
+  height: 18px;
+  accent-color: #b88a29;
   cursor: pointer;
 }
 
@@ -139,114 +139,111 @@
 .infoSidebar {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .hotlineBox {
-  background: linear-gradient(135deg, #0e1626 0%, #17243c 100%);
-  border: 1px solid rgba(197, 152, 40, 0.35);
-  border-radius: 16px;
-  padding: 30px;
-  color: #ffffff;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  background: #fbf8f0;
+  border: 1px solid rgba(184, 138, 41, 0.3);
+  border-radius: 12px;
+  padding: 28px;
+  color: #0f172a;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
 }
 
 .hotlineBox h3 {
-  font-size: 1.35rem;
-  color: #ffffff;
-  margin: 10px 0 8px;
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin: 8px 0 6px;
 }
 
 .hotlineBox p {
-  font-size: 0.88rem;
-  color: #cbd5e1;
-  margin-bottom: 20px;
+  font-size: 0.86rem;
+  color: #475569;
+  margin-bottom: 18px;
 }
 
 .phoneGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
 }
 
 .phoneBtn {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 10px 12px;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 0.88rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 9px 12px;
+  border-radius: 6px;
+  color: #0f172a;
+  font-size: 0.86rem;
   font-weight: 700;
   transition: all 0.2s ease;
 }
 
 .phoneBtn:hover {
-  background: #c59828;
-  border-color: #c59828;
+  background: #b88a29;
+  color: #ffffff;
+  border-color: #b88a29;
   transform: translateY(-2px);
 }
 
 .officesBox {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 30px;
+  border: 1px solid #ebe5d8;
+  border-radius: 12px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .officeItem {
   display: flex;
-  gap: 14px;
+  gap: 12px;
 }
 
 .officeIcon {
-  color: #c59828;
+  color: #b88a29;
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .officeItem strong {
   display: block;
-  font-size: 0.98rem;
+  font-size: 0.94rem;
   color: #0f172a;
 }
 
 .officeItem p {
   color: #64748b;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   line-height: 1.5;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* FAQ Section */
 .faqSection {
-  padding: 70px 0 90px;
-  background: #ffffff;
-  border-top: 1px solid #e2e8f0;
+  padding: 60px 0 80px;
+  background: #fbfaf8;
+  border-top: 1px solid #ebe5d8;
 }
 
 .faqList {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .faqItem {
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border: 1px solid #ebe5d8;
+  border-radius: 8px;
   overflow: hidden;
-  transition: all 0.2s ease;
-}
-
-.faqItem:hover {
-  border-color: rgba(197, 152, 40, 0.4);
+  background: #ffffff;
 }
 
 .faqQuestion {
@@ -254,49 +251,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 22px;
-  background: #fdfcf9;
-  font-size: 1rem;
+  padding: 16px 20px;
+  background: #ffffff;
+  font-size: 0.96rem;
   font-weight: 700;
   color: #0f172a;
   text-align: left;
 }
 
 .faqAnswer {
-  padding: 18px 22px;
+  padding: 16px 20px;
   color: #475569;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   line-height: 1.65;
-  background: #ffffff;
-  border-top: 1px solid #f1f5f9;
+  background: #fbfaf8;
+  border-top: 1px solid #ebe5d8;
 }
 
-/* Success Message */
+/* Success */
 .successCard {
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 16px;
 }
 
 .successIcon {
-  width: 70px;
-  height: 70px;
-  background: #e6f4ea;
+  width: 60px;
+  height: 60px;
+  background: #ecfdf5;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .successCard h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #0f172a;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .successCard p {
   color: #64748b;
-  font-size: 1rem;
+  font-size: 0.96rem;
   line-height: 1.6;
 }
 
@@ -314,9 +311,6 @@
     grid-template-columns: 1fr;
   }
   .formCard {
-    padding: 24px 18px;
-  }
-  .headerSection h1 {
-    font-size: 2.2rem;
+    padding: 20px 16px;
   }
 }

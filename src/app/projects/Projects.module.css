@@ -1,33 +1,33 @@
 .headerSection {
-  background: linear-gradient(135deg, #090e18 0%, #141c2c 100%);
-  color: #ffffff;
-  padding: 70px 0 60px;
+  background: #faf8f5;
+  color: #0f172a;
+  padding: 60px 0 50px;
   text-align: center;
-  border-bottom: 1px solid rgba(197, 152, 40, 0.25);
+  border-bottom: 1px solid rgba(184, 138, 41, 0.18);
 }
 
 .headerSection h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  margin: 12px 0 16px;
+  font-size: 2.8rem;
+  color: #0f172a;
+  margin: 12px 0 14px;
 }
 
 .headerSection p {
-  color: #94a3b8;
-  font-size: 1.1rem;
-  max-width: 720px;
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 /* Filter Controls */
 .filterBar {
   background: #ffffff;
-  padding: 24px 0;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 0;
+  border-bottom: 1px solid #ebe5d8;
   position: sticky;
-  top: 76px;
+  top: 68px;
   z-index: 100;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
 .filterInner {
@@ -45,68 +45,68 @@
 }
 
 .filterBtn {
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  padding: 9px 18px;
-  border-radius: 30px;
-  font-size: 0.86rem;
+  background: #fbfaf8;
+  border: 1px solid #e2e8f0;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.84rem;
   font-weight: 600;
-  color: #334155;
+  color: #475569;
   transition: all 0.2s ease;
 }
 
 .filterBtn:hover {
-  border-color: #c59828;
-  color: #997416;
+  border-color: #b88a29;
+  color: #b88a29;
 }
 
 .filterBtnActive {
   background: #0f172a;
-  color: #dfba5c;
+  color: #ffffff;
   border-color: #0f172a;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
 }
 
 .statsCount {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: #64748b;
   font-weight: 600;
 }
 
 /* Projects Grid */
 .projectsSection {
-  padding: 60px 0 90px;
-  background: #fbfaf8;
+  padding: 60px 0 80px;
+  background: #ffffff;
 }
 
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
+  gap: 32px;
 }
 
 .projectCard {
   background: #ffffff;
-  border: 1px solid rgba(197, 152, 40, 0.2);
-  border-radius: 16px;
+  border: 1px solid #ebe5d8;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
   transition: all 0.35s ease;
   display: flex;
   flex-direction: column;
 }
 
 .projectCard:hover {
-  transform: translateY(-6px);
-  border-color: rgba(197, 152, 40, 0.45);
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+  transform: translateY(-5px);
+  border-color: rgba(184, 138, 41, 0.4);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
 }
 
 .projectMedia {
   position: relative;
-  height: 290px;
+  height: 280px;
   overflow: hidden;
-  background: #0c121e;
+  background: #f8fafc;
 }
 
 .projectImg {
@@ -118,77 +118,79 @@
 }
 
 .projectCard:hover .projectImg {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .statusBadge {
   position: absolute;
-  top: 18px;
-  left: 18px;
-  background: rgba(12, 18, 30, 0.85);
+  top: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
-  color: #dfba5c;
-  padding: 6px 14px;
-  border-radius: 30px;
-  font-size: 0.78rem;
+  color: #0f4c3a;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
   font-weight: 700;
-  border: 1px solid rgba(197, 152, 40, 0.4);
+  border: 1px solid rgba(15, 76, 58, 0.2);
+  text-transform: uppercase;
 }
 
 .locationBadge {
   position: absolute;
-  bottom: 18px;
-  left: 18px;
-  background: rgba(255, 255, 255, 0.95);
+  bottom: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.94);
   color: #0f172a;
   padding: 5px 12px;
-  border-radius: 6px;
-  font-size: 0.8rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 5px;
+  border: 1px solid #e2e8f0;
 }
 
 .projectBody {
-  padding: 28px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .projectScale {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #c59828;
+  color: #b88a29;
   letter-spacing: 0.08em;
   margin-bottom: 6px;
 }
 
 .projectTitle {
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   color: #0f172a;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   line-height: 1.25;
 }
 
 .projectDesc {
   color: #526077;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .specsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px;
-  margin-bottom: 22px;
+  background: #fbfaf8;
+  border: 1px solid #ebe5d8;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 20px;
 }
 
 .specItem {
@@ -198,14 +200,14 @@
 }
 
 .specLabel {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #64748b;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .specVal {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #0f172a;
   margin-top: 2px;
@@ -215,14 +217,14 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .feat {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   color: #334155;
   font-weight: 500;
 }
@@ -232,35 +234,23 @@
   align-items: center;
   gap: 12px;
   margin-top: auto;
-  padding-top: 18px;
+  padding-top: 16px;
   border-top: 1px solid #f1f5f9;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .projectsGrid {
     grid-template-columns: 1fr;
-  }
-  .headerSection h1 {
-    font-size: 2.3rem;
   }
 }
 
 @media (max-width: 600px) {
   .specsGrid {
     grid-template-columns: 1fr;
-    gap: 12px;
     text-align: left;
   }
   .specItem {
-    text-align: left;
     flex-direction: row;
     justify-content: space-between;
-  }
-  .projectActions {
-    flex-direction: column;
-  }
-  .projectActions button, .projectActions a {
-    width: 100%;
   }
 }
