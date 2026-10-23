@@ -28,6 +28,15 @@
 .logoLink {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  outline: none !important;
+  border: none !important;
+}
+
+.logoLink:focus,
+.logoLink:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .logoImg {
@@ -39,23 +48,25 @@
 .navMenu {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
 }
 
 .navLink {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: var(--color-charcoal);
+  color: #2F3542;
   text-transform: uppercase;
   transition: color 0.2s ease;
   position: relative;
-  padding: 4px 0;
+  padding: 6px 0;
+  text-decoration: none;
+  outline: none;
 }
 
 .navLink:hover,
 .navLinkActive {
-  color: var(--color-brown);
+  color: #8C5E35;
 }
 
 .navLinkActive::after {
@@ -65,7 +76,8 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--color-brown);
+  background-color: #8C5E35;
+  border-radius: 2px;
 }
 
 .navRight {
@@ -79,21 +91,23 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--color-brown);
+  background: linear-gradient(135deg, #8C5E35 0%, #A37446 100%);
   color: #FFFFFF;
-  padding: 10px 22px;
+  padding: 8px 20px;
   border-radius: 50px;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  box-shadow: 0 4px 14px rgba(139, 96, 61, 0.25);
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(140, 94, 53, 0.3);
   transition: all 0.25s ease;
+  text-decoration: none;
+  outline: none;
 }
 
 .callPill:hover {
-  background-color: var(--color-brown-dark);
+  background: linear-gradient(135deg, #7A4E27 0%, #906336 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(139, 96, 61, 0.35);
+  box-shadow: 0 6px 18px rgba(140, 94, 53, 0.4);
   color: #FFFFFF;
 }
 

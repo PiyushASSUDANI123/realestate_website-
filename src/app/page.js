@@ -6,7 +6,9 @@ import {
   Phone,
   ArrowRight,
   MapPin,
+  LayoutGrid,
   Layers,
+  Building2,
   Trees,
   ShieldCheck,
   TrendingUp,
@@ -38,10 +40,10 @@ export default function HomePage() {
   return (
     <>
       {/* ========================================================
-          HERO SECTION - EXACT MATCH TO SS1 (image.png)
+          HERO SECTION - EXACT MATCH TO SS2 (media_1792752352441.jpg)
           ======================================================== */}
       <section className={styles.heroContainer}>
-        {/* Content */}
+        {/* Content in the Upper Region */}
         <div className={styles.heroContentWrapper}>
           <div className={styles.heroLeft}>
             <div className={styles.heroTagline}>
@@ -58,9 +60,9 @@ export default function HomePage() {
             </p>
 
             <a href="tel:9461051515" className={styles.heroCtaBtn}>
-              <Phone size={18} />
+              <Phone size={15} />
               <span>9461051515</span>
-              <ArrowRight size={18} />
+              <ArrowRight size={15} />
             </a>
           </div>
 
@@ -69,11 +71,12 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Bottom Hero Stats Card & Scroll Icon from SS1 */}
+        {/* Bottom Hero Area with Curved Wave, Pill Card on Left, Scroll in Center */}
         <div className={styles.heroBottomArea}>
+          {/* Pill Card on Bottom-Left */}
           <div className={styles.infoPillCard}>
             <div className={styles.infoPillCol}>
-              <MapPin size={26} className={styles.infoPillIcon} />
+              <MapPin size={20} className={styles.infoPillIcon} />
               <div className={styles.infoPillText}>
                 <strong>Moulasar</strong>
                 <span>JAIPUR</span>
@@ -83,7 +86,7 @@ export default function HomePage() {
             <div className={styles.infoPillDivider} />
 
             <div className={styles.infoPillCol}>
-              <Layers size={26} className={styles.infoPillIcon} />
+              <LayoutGrid size={20} className={styles.infoPillIcon} />
               <div className={styles.infoPillText}>
                 <strong>100 बीघा</strong>
                 <span>PREMIUM LAND</span>
@@ -93,7 +96,7 @@ export default function HomePage() {
             <div className={styles.infoPillDivider} />
 
             <div className={styles.infoPillCol}>
-              <Compass size={26} className={styles.infoPillIcon} />
+              <Building2 size={20} className={styles.infoPillIcon} />
               <div className={styles.infoPillText}>
                 <strong>Coming Soon</strong>
                 <span>A NEW WAY OF LIVING</span>
@@ -101,13 +104,28 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Mouse Scroll Indicator */}
+          {/* Mouse Scroll in Center Dip */}
           <div className={styles.scrollIndicator} onClick={() => scrollToSection("about")}>
             <div className={styles.mouseIcon}>
               <div className={styles.mouseWheel} />
             </div>
             <span>SCROLL</span>
+            <div className={styles.scrollLine} />
           </div>
+
+          {/* Curved Wave Bottom Divider */}
+          <div className={styles.bottomWaveWrapper}>
+            <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className={styles.bottomWaveSvg}>
+              <path
+                d="M0,35 C320,65 520,25 660,38 C690,41 710,50 720,50 C730,50 750,41 780,38 C920,25 1120,65 1440,35 L1440,90 L0,90 Z"
+                fill="#FDFBF1"
+              />
+            </svg>
+          </div>
+
+          {/* Corner Leaves from Mockup */}
+          <img src="/images/leaf_bl_cut.png" alt="" className={styles.leafLeft} />
+          <img src="/images/leaf_br_cut.png" alt="" className={styles.leafRight} />
         </div>
       </section>
 

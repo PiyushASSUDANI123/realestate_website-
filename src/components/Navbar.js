@@ -25,8 +25,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/#about" },
-    { name: "PROJECT", href: "/projects" },
-    { name: "GALLERY", href: "/#gallery" },
+    { name: "PROJECT", href: "/#project" },
     { name: "CONTACT", href: "/contact" },
   ];
 

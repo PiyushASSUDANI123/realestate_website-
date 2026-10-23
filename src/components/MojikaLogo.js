@@ -36,40 +36,41 @@ export default function MojikaLogo({ width = 180, height = 44, lightText = false
       </svg>
 
       {/* Brand Name Typography */}
-      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: "6px", lineHeight: "1" }}>
-          <span
-            style={{
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontWeight: "900",
-              fontSize: "1.25rem",
-              letterSpacing: "0.06em",
-              color: "#C5221F",
-            }}
-          >
-            MOJIKA
-          </span>
-          <span
-            style={{
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontWeight: "800",
-              fontSize: "0.85rem",
-              letterSpacing: "0.12em",
-              color: lightText ? "#DFBA5C" : "#997416",
-            }}
-          >
-            GROUP
-          </span>
-        </div>
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", lineHeight: "1.1" }}>
+        <span
+          style={{
+            fontFamily: "'Cinzel', Georgia, serif",
+            fontWeight: "900",
+            fontSize: "1.2rem",
+            letterSpacing: "0.06em",
+            color: "#C5221F",
+            lineHeight: "1",
+          }}
+        >
+          MOJIKA
+        </span>
+        <span
+          style={{
+            fontFamily: "'Cinzel', Georgia, serif",
+            fontWeight: "900",
+            fontSize: "1.05rem",
+            letterSpacing: "0.14em",
+            color: "#C5221F",
+            lineHeight: "1",
+            marginTop: "1px",
+          }}
+        >
+          GROUP
+        </span>
+        <div style={{ width: "100%", height: "1px", backgroundColor: "#D4B26F", margin: "3px 0 2px" }} />
         <span
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontSize: "0.58rem",
-            letterSpacing: "0.22em",
+            fontSize: "0.5rem",
+            letterSpacing: "0.18em",
             fontWeight: "700",
-            color: lightText ? "#E2E8F0" : "#6E492B",
+            color: lightText ? "#DFBA5C" : "#8C603D",
             textTransform: "uppercase",
-            marginTop: "3px",
             lineHeight: "1",
           }}
         >
