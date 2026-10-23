@@ -34,7 +34,7 @@ const amenitiesList = [
     category: "clubhouse",
     tag: "Signature Clubhouse",
     desc: "A majestic double-height grand lobby, private banquet hall, members-only café lounge, and indoor games arcade designed for royal social living.",
-    image: "/images/clubhouse.jpg",
+    image: "/images/clubhouse.webp",
     highlights: ["Private Banquet Hall", "Members Lounge & Café", "Mini Theatre", "Billiards & Board Games"],
   },
   {
@@ -42,7 +42,7 @@ const amenitiesList = [
     category: "clubhouse",
     tag: "Aquatic Paradise",
     desc: "Heated resort-style infinity swimming pool with private sun-loungers, dedicated kids splash pool, and Jacuzzi jets surrounded by palm trees.",
-    image: "/images/lifestyle.jpg",
+    image: "/images/lifestyle.webp",
     highlights: ["Temperature Controlled", "Kids Splash Zone", "Sun Deck & Cabanas", "Poolside Juice Bar"],
   },
   {
@@ -50,7 +50,7 @@ const amenitiesList = [
     category: "infrastructure",
     tag: "Landmark Gateway",
     desc: "Majestic Rajasthani hand-carved stone archway with automatic boom barriers, RFID vehicle scanners, and 24/7 armed security checkposts.",
-    image: "/images/gate.jpg",
+    image: "/images/gate.webp",
     highlights: ["Hand-Carved Stone Facade", "RFID Access Gates", "24/7 Security Cabin", "CCTV ANPR Cameras"],
   },
   {
@@ -58,7 +58,7 @@ const amenitiesList = [
     category: "infrastructure",
     tag: "Wide Blacktop Roads",
     desc: "Engineered asphalt roads designed with paved walkways, landscaped central verges, underground storm water drainage, and solar illumination.",
-    image: "/images/plots.jpg",
+    image: "/images/plots.webp",
     highlights: ["60-Ft Main Arterial Road", "40-Ft Sector Roads", "Underground Utility Ducts", "Paved Walkways"],
   },
   {
@@ -66,7 +66,7 @@ const amenitiesList = [
     category: "infrastructure",
     tag: "Fast Mobility",
     desc: "Direct access to the multi-lane expressway connecting Maulasar seamlessly to Jaipur, Kishangarh Airport, and Sikar.",
-    image: "/images/highway.jpg",
+    image: "/images/highway.webp",
     highlights: ["Zero Traffic Jams", "Wide Multi-Lane Corridor", "Signal-Free Junction", "Highway Facing Entry"],
   },
   {
@@ -74,7 +74,7 @@ const amenitiesList = [
     category: "nature",
     tag: "Holistic Wellness",
     desc: "Natural stone reflexology walking trails, aromatic herb gardens, outdoor yoga pavilions, and peaceful water fountains for mindful mornings.",
-    image: "/images/lifestyle.jpg",
+    image: "/images/lifestyle.webp",
     highlights: ["Reflexology Path", "Yoga & Meditation Deck", "Water Cascade", "Aromatherapy Garden"],
   },
   {
@@ -82,7 +82,7 @@ const amenitiesList = [
     category: "sports",
     tag: "Active Lifestyle",
     desc: "Floodlit synthetic tennis court, dual badminton courts, half basketball court, and dedicated cricket nets with professional turfing.",
-    image: "/images/clubhouse.jpg",
+    image: "/images/clubhouse.webp",
     highlights: ["Floodlit Tennis Court", "2 Badminton Courts", "Cricket Practice Nets", "Basketball Half-Court"],
   },
   {
@@ -90,7 +90,7 @@ const amenitiesList = [
     category: "infrastructure",
     tag: "Safety & Privacy",
     desc: "10-foot gated perimeter boundary wall with solar fencing, 360-degree night-vision CCTV surveillance, and verified visitor management app.",
-    image: "/images/gate.jpg",
+    image: "/images/gate.webp",
     highlights: ["Solar Electric Perimeter", "AI Motion Detection", "24/7 Security Patrols", "Visitor QR App"],
   },
   {
@@ -98,7 +98,7 @@ const amenitiesList = [
     category: "nature",
     tag: "Safe Play Space",
     desc: "Specially designed rubberized safety flooring, wooden obstacle courses, swings, slides, sand pits, and shaded seating for parents.",
-    image: "/images/plots.jpg",
+    image: "/images/plots.webp",
     highlights: ["Shock-Absorbing Floor", "Wooden Treehouse Play", "Toddler Sand Pit", "CCTV Covered"],
   },
 ];
@@ -213,7 +213,7 @@ export default function AmenitiesPage() {
             </div>
             <div className={styles.spotlightVisual}>
               <img
-                src="/images/clubhouse.jpg"
+                src="/images/clubhouse.webp"
                 alt="Club Mojika Interior"
                 className={styles.spotlightImg}
               />

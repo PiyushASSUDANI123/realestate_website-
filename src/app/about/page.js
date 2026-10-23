@@ -92,7 +92,7 @@ export default function AboutPage() {
 
             <div className={styles.storyVisual}>
               <img
-                src="/images/hero.jpg"
+                src="/images/hero.webp"
                 alt="Mojika Group Landmark Township"
                 className={styles.storyImg}
               />

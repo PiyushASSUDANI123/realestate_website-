@@ -35,7 +35,7 @@ export default function BannerModal({ isOpen, onClose }) {
 
         <div className={styles.imageContainer}>
           <img
-            src="/images/mojika-banner.png"
+            src="/images/mojika-banner.webp"
             alt="Mojika Group Maulasar 100 Bigha Township Official Launch Banner"
             className={styles.bannerImage}
           />

@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "Mojika Group | 100 Bigha Mega Township Maulasar & Jaipur",
     description: "Experience Jaipur-grade modern lifestyle in Maulasar across an expansive 100-Bigha master planned township.",
-    images: ["/images/hero.jpg"],
+    images: ["/images/hero.webp"],
   },
 };
 

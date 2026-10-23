@@ -8,37 +8,37 @@ const galleryItems = [
   {
     title: "100-Bigha Master Plotted Layout",
     category: "Master Planning",
-    image: "/images/plots.jpg",
+    image: "/images/plots.webp",
     desc: "Aerial perspective of organized plotted sectors with 60ft avenues, landscaped roundabouts, and dedicated park lungs.",
   },
   {
     title: "60-Ft Grand Imperial Gateway",
     category: "Infrastructure",
-    image: "/images/gate.jpg",
+    image: "/images/gate.webp",
     desc: "Contemporary stone architectural entrance portal with multi-lane boom barriers, palm-lined avenues, and security cabin.",
   },
   {
     title: "The Regal Clubhouse & Infinity Pool",
     category: "Resort Lifestyle",
-    image: "/images/clubhouse.jpg",
+    image: "/images/clubhouse.webp",
     desc: "Luxury multi-level recreational clubhouse featuring glass lounge, heated infinity swimming pool, and twilight deck.",
   },
   {
     title: "Palm Boulevard & Villa Enclave",
     category: "Living Ambience",
-    image: "/images/hero.jpg",
+    image: "/images/hero.webp",
     desc: "Lush residential avenues with underground cabling, stone-paved sidewalks, and contemporary villa designs.",
   },
   {
     title: "State Highway Connectivity",
     category: "Connectivity",
-    image: "/images/highway.jpg",
+    image: "/images/highway.webp",
     desc: "Scenic smooth multi-lane arterial highway connecting Maulasar directly to Jaipur, Didwana, and Sikar.",
   },
   {
     title: "Executive Villa Living Space",
     category: "Architecture",
-    image: "/images/interior.jpg",
+    image: "/images/interior.webp",
     desc: "Double-height living pavilion with floor-to-ceiling glass facades overlooking private lawns and tranquil greenery.",
   },
 ];

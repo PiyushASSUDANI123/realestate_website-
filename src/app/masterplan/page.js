@@ -106,7 +106,7 @@ export default function MasterplanPage() {
     e.preventDefault();
     setDownloadSuccess(true);
     setTimeout(() => {
-      window.open("/images/hero-bg.png", "_blank");
+      window.open("/images/hero-bg.webp", "_blank");
       setDownloadSuccess(false);
     }, 1200);
   };
@@ -147,7 +147,7 @@ export default function MasterplanPage() {
 
             <div className={styles.mainMapWrapper}>
               <img
-                src="/images/plots.jpg"
+                src="/images/plots.webp"
                 alt="Mojika 100-Bigha Master Layout Map"
                 className={styles.masterMapImg}
               />

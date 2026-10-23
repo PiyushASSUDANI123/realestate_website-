@@ -73,7 +73,7 @@ export default function MasterPlanExplorer({ onBookSiteVisit }) {
         <div className={styles.mapContainer}>
           <div className={styles.imageWrapper}>
             <img
-              src="/images/masterplan.jpg"
+              src="/images/masterplan.webp"
               alt="100 Bigha Master Plan 3D Rendering"
               className={styles.mapImage}
             />

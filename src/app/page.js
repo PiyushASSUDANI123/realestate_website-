@@ -148,7 +148,7 @@ export default function HomePage() {
 
             <div className={styles.aboutVisualWrapper}>
               <img
-                src="/images/gate.jpg"
+                src="/images/gate.webp"
                 alt="Mojika Group Grand Entrance Gate"
                 className={styles.aboutGateImg}
               />
@@ -185,7 +185,7 @@ export default function HomePage() {
 
             <div className={styles.overviewVisual}>
               <img
-                src="/images/plots.jpg"
+                src="/images/plots.webp"
                 alt="Mojika Plotted Township Aerial Overview"
                 className={styles.overviewImg}
               />
@@ -316,7 +316,7 @@ export default function HomePage() {
 
             <div className={styles.locationRight}>
               <img
-                src="/images/highway.jpg"
+                src="/images/highway.webp"
                 alt="Moulasar Highway Connectivity"
                 className={styles.locationRoadImg}
               />
@@ -345,19 +345,19 @@ export default function HomePage() {
 
           <div className={styles.galleryGrid}>
             <div className={styles.galleryCard}>
-              <img src="/images/plots.jpg" alt="100-Bigha Aerial View" className={styles.galleryImg} />
+              <img src="/images/plots.webp" alt="100-Bigha Aerial View" className={styles.galleryImg} />
               <div className={styles.galleryCaption}>100-Bigha Master Plotted Layout</div>
             </div>
             <div className={styles.galleryCard}>
-              <img src="/images/gate.jpg" alt="Grand Entrance Gate" className={styles.galleryImg} />
+              <img src="/images/gate.webp" alt="Grand Entrance Gate" className={styles.galleryImg} />
               <div className={styles.galleryCaption}>60-Ft Grand Imperial Gateway</div>
             </div>
             <div className={styles.galleryCard}>
-              <img src="/images/hero.jpg" alt="Luxury Villa Architecture" className={styles.galleryImg} />
+              <img src="/images/hero.webp" alt="Luxury Villa Architecture" className={styles.galleryImg} />
               <div className={styles.galleryCaption}>Palm Boulevard & Villa Enclave</div>
             </div>
             <div className={styles.galleryCard}>
-              <img src="/images/clubhouse.jpg" alt="Resort Clubhouse & Pool" className={styles.galleryImg} />
+              <img src="/images/clubhouse.webp" alt="Resort Clubhouse & Pool" className={styles.galleryImg} />
               <div className={styles.galleryCaption}>Resort Clubhouse & Infinity Pool</div>
             </div>
           </div>
@@ -385,7 +385,7 @@ export default function HomePage() {
           <div className={styles.amenitiesCardGrid}>
             <div className={styles.amenityShowcaseCard}>
               <div className={styles.amenityCardImgWrap}>
-                <img src="/images/clubhouse.jpg" alt="Club Mojika" />
+                <img src="/images/clubhouse.webp" alt="Club Mojika" />
                 <span className={styles.amenityCardBadge}>25,000 Sq.Ft.</span>
               </div>
               <div className={styles.amenityCardContent}>
@@ -396,7 +396,7 @@ export default function HomePage() {
 
             <div className={styles.amenityShowcaseCard}>
               <div className={styles.amenityCardImgWrap}>
-                <img src="/images/lifestyle.jpg" alt="Infinity Pool" />
+                <img src="/images/lifestyle.webp" alt="Infinity Pool" />
                 <span className={styles.amenityCardBadge}>Olympic Length</span>
               </div>
               <div className={styles.amenityCardContent}>
@@ -407,7 +407,7 @@ export default function HomePage() {
 
             <div className={styles.amenityShowcaseCard}>
               <div className={styles.amenityCardImgWrap}>
-                <img src="/images/plots.jpg" alt="60-Ft Wide Avenues" />
+                <img src="/images/plots.webp" alt="60-Ft Wide Avenues" />
                 <span className={styles.amenityCardBadge}>Wide Blacktop</span>
               </div>
               <div className={styles.amenityCardContent}>
@@ -418,7 +418,7 @@ export default function HomePage() {
 
             <div className={styles.amenityShowcaseCard}>
               <div className={styles.amenityCardImgWrap}>
-                <img src="/images/gate.jpg" alt="3-Tier Security" />
+                <img src="/images/gate.webp" alt="3-Tier Security" />
                 <span className={styles.amenityCardBadge}>24/7 Gated</span>
               </div>
               <div className={styles.amenityCardContent}>
@@ -641,7 +641,7 @@ export default function HomePage() {
 
             <div className={styles.contactVisualWrapper}>
               <img
-                src="/images/gate.jpg"
+                src="/images/gate.webp"
                 alt="Mojika Group Gateway"
                 className={styles.contactGatePhoto}
               />
