@@ -6,8 +6,8 @@
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  min-height: 100vh;
-  min-height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,7 +22,7 @@
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: clamp(75px, 10vh, 95px);
+  padding-top: 74px;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -33,7 +33,7 @@
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
-  padding: clamp(6px, 1.5vh, 20px) clamp(20px, 3.5vw, 48px) 0;
+  padding: 8px clamp(20px, 3.5vw, 48px) 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -51,12 +51,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: clamp(0.65rem, 0.8vw, 0.72rem);
+  font-size: clamp(0.65rem, 0.78vw, 0.72rem);
   font-weight: 700;
   letter-spacing: 0.22em;
   color: #705844;
   text-transform: uppercase;
-  margin-bottom: clamp(6px, 1vh, 10px);
+  margin-bottom: 8px;
 }
 
 .heroTagline::after {
@@ -71,12 +71,12 @@
 .heroHeadline {
   font-family: var(--font-hindi);
   line-height: 1.14;
-  margin-bottom: clamp(6px, 1vh, 10px);
+  margin-bottom: 8px;
 }
 
 .headlineBlack {
   display: block;
-  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  font-size: clamp(1.8rem, 2.6vw, 2.45rem);
   font-weight: 900;
   color: #161A21;
   letter-spacing: -0.01em;
@@ -85,7 +85,7 @@
 
 .headlineRed {
   display: block;
-  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  font-size: clamp(1.8rem, 2.6vw, 2.45rem);
   font-weight: 900;
   color: #C41E1E;
   letter-spacing: -0.01em;
@@ -95,10 +95,10 @@
 
 .heroSubtext {
   font-family: var(--font-hindi);
-  font-size: clamp(0.95rem, 1.2vw, 1.12rem);
+  font-size: clamp(0.92rem, 1.1vw, 1.08rem);
   font-weight: 600;
   color: #2B323D;
-  margin-bottom: clamp(14px, 2vh, 22px);
+  margin-bottom: 16px;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
 }
 
@@ -109,8 +109,8 @@
   background: linear-gradient(135deg, #7A4E27 0%, #9C6C3B 100%);
   color: #FFFFFF;
   font-weight: 700;
-  font-size: clamp(0.82rem, 0.95vw, 0.9rem);
-  padding: clamp(8px, 1.1vh, 10px) clamp(18px, 1.8vw, 24px);
+  font-size: clamp(0.82rem, 0.92vw, 0.88rem);
+  padding: 8px 22px;
   border-radius: 50px;
   box-shadow: 0 6px 18px rgba(122, 78, 39, 0.35);
   transition: all 0.25s ease;
@@ -125,13 +125,13 @@
 }
 
 .heroRight {
-  padding-top: clamp(8px, 1.8vh, 20px);
+  padding-top: 12px;
   padding-right: clamp(10px, 2.5vw, 40px);
 }
 
 .comingSoonScript {
   font-family: var(--font-script), 'Dancing Script', cursive;
-  font-size: clamp(3.4rem, 4.8vw, 4.8rem);
+  font-size: clamp(3.2rem, 4.5vw, 4.6rem);
   color: #A87F38;
   transform: rotate(-8deg);
   display: inline-block;
@@ -159,7 +159,7 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  height: clamp(100px, 14vh, 135px);
+  height: 110px;
   margin-top: auto;
   pointer-events: none;
 }
@@ -169,7 +169,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: clamp(65px, 9vh, 90px);
+  height: 56px;
   line-height: 0;
   z-index: 6;
   pointer-events: none;
@@ -183,19 +183,19 @@
 
 .infoPillCard {
   position: absolute;
-  left: clamp(20px, 4vw, 50px);
-  bottom: clamp(20px, 3.2vh, 34px);
+  left: clamp(20px, 3.6vw, 46px);
+  bottom: 28px;
   z-index: 12;
   pointer-events: auto;
   background: #FAF8F2;
   border: 1px solid #EAE3D4;
-  border-radius: 16px;
-  padding: clamp(7px, 1vh, 10px) clamp(16px, 1.8vw, 24px);
+  border-radius: 14px;
+  padding: 8px clamp(14px, 1.6vw, 20px);
   display: flex;
   align-items: center;
-  gap: clamp(12px, 1.8vw, 22px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
-  max-width: 580px;
+  gap: clamp(10px, 1.5vw, 20px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  max-width: 560px;
 }
 
 .infoPillCol {
@@ -211,7 +211,7 @@
 
 .infoPillText strong {
   display: block;
-  font-size: clamp(0.78rem, 0.9vw, 0.88rem);
+  font-size: clamp(0.76rem, 0.88vw, 0.85rem);
   font-weight: 800;
   color: #181C22;
   line-height: 1.15;
@@ -219,7 +219,7 @@
 
 .infoPillText span {
   display: block;
-  font-size: clamp(0.55rem, 0.65vw, 0.62rem);
+  font-size: clamp(0.52rem, 0.62vw, 0.6rem);
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #767E88;
@@ -229,7 +229,7 @@
 
 .infoPillDivider {
   width: 1px;
-  height: clamp(20px, 2.5vh, 26px);
+  height: 22px;
   background-color: #E2D9C8;
 }
 
@@ -237,13 +237,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: clamp(6px, 1vh, 10px);
+  bottom: 12px;
   z-index: 12;
   pointer-events: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
   color: #8C7866;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -257,9 +257,9 @@
 
 .mouseIcon {
   width: 13px;
-  height: 21px;
+  height: 20px;
   border: 1.5px solid #8C7866;
-  border-radius: 8px;
+  border-radius: 7px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -284,31 +284,9 @@
 
 .scrollLine {
   width: 1px;
-  height: 12px;
+  height: 10px;
   background-color: #C8B9A6;
   margin-top: 1px;
-}
-
-.leafLeft {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 140px;
-  height: auto;
-  z-index: 8;
-  pointer-events: none;
-  opacity: 0.95;
-}
-
-.leafRight {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 140px;
-  height: auto;
-  z-index: 8;
-  pointer-events: none;
-  opacity: 0.95;
 }
 
 @keyframes mouseWheelMove {

@@ -115,17 +115,13 @@ export default function HomePage() {
 
           {/* Curved Wave Bottom Divider */}
           <div className={styles.bottomWaveWrapper}>
-            <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className={styles.bottomWaveSvg}>
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className={styles.bottomWaveSvg}>
               <path
-                d="M0,35 C320,65 520,25 660,38 C690,41 710,50 720,50 C730,50 750,41 780,38 C920,25 1120,65 1440,35 L1440,90 L0,90 Z"
+                d="M0,45 C320,68 520,32 660,42 C690,44 710,50 720,50 C730,50 750,44 780,42 C920,32 1120,68 1440,45 L1440,80 L0,80 Z"
                 fill="#FDFBF1"
               />
             </svg>
           </div>
-
-          {/* Corner Leaves from Mockup */}
-          <img src="/images/leaf_bl_cut.png" alt="" className={styles.leafLeft} />
-          <img src="/images/leaf_br_cut.png" alt="" className={styles.leafRight} />
         </div>
       </section>
 
