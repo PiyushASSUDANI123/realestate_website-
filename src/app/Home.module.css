@@ -4,28 +4,19 @@
 .heroContainer {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url('/images/hero-mockup.png') center top / cover no-repeat;
-  padding-top: 100px;
+  background-color: var(--color-ivory);
+  background-image: 
+    linear-gradient(180deg, rgba(253, 251, 241, 0.2) 0%, rgba(253, 251, 241, 0) 40%, rgba(253, 251, 241, 0.6) 80%, rgba(253, 251, 241, 0.98) 100%),
+    url('/images/plots.jpg');
+  background-position: center 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 110px;
   overflow: hidden;
-}
-
-/* Semi-transparent soft warm overlay for contrast */
-.heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(253, 251, 241, 0.15) 0%,
-    rgba(253, 251, 241, 0) 40%,
-    rgba(253, 251, 241, 0.45) 85%,
-    rgba(253, 251, 241, 0.95) 100%
-  );
-  z-index: 1;
-  pointer-events: none;
 }
 
 .heroContentWrapper {
@@ -34,26 +25,26 @@
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
-  padding: 40px 24px 0;
+  padding: 30px 24px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 .heroLeft {
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .heroTagline {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   color: var(--color-charcoal);
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .heroTagline::after {
@@ -66,13 +57,13 @@
 
 .heroHeadline {
   font-family: var(--font-hindi);
-  line-height: 1.18;
-  margin-bottom: 12px;
+  line-height: 1.15;
+  margin-bottom: 14px;
 }
 
 .headlineBlack {
   display: block;
-  font-size: 3.4rem;
+  font-size: 3.5rem;
   font-weight: 900;
   color: #171717;
   letter-spacing: -0.01em;
@@ -80,7 +71,7 @@
 
 .headlineRed {
   display: block;
-  font-size: 3.4rem;
+  font-size: 3.5rem;
   font-weight: 900;
   color: #E6391D;
   letter-spacing: -0.01em;
@@ -117,13 +108,13 @@
 }
 
 .heroRight {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-right: 20px;
 }
 
 .comingSoonScript {
   font-family: var(--font-script);
-  font-size: 5.5rem;
+  font-size: 5.8rem;
   color: #B88A29;
   transform: rotate(-6deg);
   display: inline-block;
@@ -133,7 +124,7 @@
   user-select: none;
 }
 
-/* Bottom Hero Stats Card from Mockup */
+/* Bottom Hero Stats Card */
 .heroBottomArea {
   position: relative;
   z-index: 5;
@@ -142,23 +133,23 @@
   flex-direction: column;
   align-items: center;
   margin-top: auto;
-  padding-bottom: 10px;
+  padding-bottom: 16px;
 }
 
 .infoPillCard {
-  background: rgba(253, 251, 241, 0.94);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  padding: 16px 36px;
+  padding: 18px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  max-width: 680px;
+  gap: 40px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  max-width: 720px;
   width: 90%;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .infoPillCol {
@@ -174,7 +165,7 @@
 
 .infoPillText strong {
   display: block;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--color-charcoal);
   line-height: 1.2;
@@ -192,11 +183,10 @@
 
 .infoPillDivider {
   width: 1px;
-  height: 34px;
+  height: 36px;
   background-color: var(--color-border);
 }
 
-/* Organic Wave Bottom with Scroll Mouse */
 .scrollIndicator {
   display: flex;
   flex-direction: column;
@@ -244,19 +234,19 @@
    SECTION 1: ABOUT US (from SS2)
    ======================================================== */
 .sectionAbout {
-  padding: 90px 0 70px;
+  padding: 100px 0 80px;
   background-color: var(--color-ivory);
 }
 
 .aboutGrid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1.05fr 1.15fr;
   gap: 60px;
   align-items: center;
 }
 
 .aboutContent h2 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--color-charcoal);
   margin-bottom: 4px;
@@ -264,34 +254,34 @@
 }
 
 .aboutSubtitle {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.22em;
   color: var(--color-brown);
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   display: block;
 }
 
 .aboutHindiText {
   font-family: var(--font-hindi);
-  font-size: 1.08rem;
-  line-height: 1.8;
+  font-size: 1.12rem;
+  line-height: 1.85;
   color: var(--color-slate);
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .aboutVisualWrapper {
   position: relative;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--color-border);
 }
 
 .aboutGateImg {
   width: 100%;
-  height: auto;
+  height: 380px;
   display: block;
   object-fit: cover;
   transition: transform 0.5s ease;
@@ -306,7 +296,7 @@
    SECTION 2: PROJECT OVERVIEW (from SS2)
    ======================================================== */
 .sectionOverview {
-  padding: 80px 0;
+  padding: 90px 0;
   background-color: #FAF7EE;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -314,38 +304,39 @@
 
 .overviewGrid {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 50px;
   align-items: center;
 }
 
 .overviewContent h2 {
   font-family: var(--font-hindi);
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: 2.6rem;
+  font-weight: 900;
   color: var(--color-charcoal);
   line-height: 1.25;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .overviewHindiText {
   font-family: var(--font-hindi);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   line-height: 1.8;
   color: var(--color-slate);
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
-.overviewCollage {
+.overviewVisual {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--color-border);
 }
 
-.collageImg {
+.overviewImg {
   width: 100%;
-  height: auto;
+  height: 380px;
+  object-fit: cover;
   display: block;
 }
 
@@ -394,8 +385,8 @@
 }
 
 .highlightIconBox {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
   background: var(--color-ivory);
   border: 1px solid var(--color-border);
@@ -408,14 +399,14 @@
 
 .highlightItem strong {
   font-family: var(--font-hindi);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--color-charcoal);
   margin-bottom: 4px;
 }
 
 .highlightItem span {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--color-slate);
 }
 
@@ -425,15 +416,14 @@
    ======================================================== */
 .sectionLifestyle {
   width: 100%;
-  margin: 0;
   position: relative;
 }
 
 .lifestyleBanner {
   position: relative;
   width: 100%;
-  height: 480px;
-  background: url('/images/family-lifestyle.png') center center / cover no-repeat;
+  height: 500px;
+  background: url('/images/lifestyle.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
 }
@@ -443,8 +433,8 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(253, 251, 241, 0.95) 0%,
-    rgba(253, 251, 241, 0.75) 45%,
+    rgba(253, 251, 241, 0.94) 0%,
+    rgba(253, 251, 241, 0.72) 45%,
     rgba(253, 251, 241, 0.1) 100%
   );
 }
@@ -452,24 +442,24 @@
 .lifestyleContent {
   position: relative;
   z-index: 2;
-  max-width: 520px;
+  max-width: 560px;
   padding-left: 60px;
 }
 
 .lifestyleTitle {
   font-family: var(--font-hindi);
-  font-size: 2.8rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 900;
   color: #6E492B;
   line-height: 1.15;
   letter-spacing: 0.02em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .lifestyleSubtitle {
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
   color: var(--color-brown);
   text-transform: uppercase;
 }
@@ -479,7 +469,7 @@
    SECTION 5: OUR LOCATION (from SS2)
    ======================================================== */
 .sectionLocation {
-  padding: 80px 0;
+  padding: 90px 0;
   background-color: var(--color-ivory);
 }
 
@@ -499,22 +489,22 @@
 }
 
 .locationLeft h2 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: var(--color-charcoal);
   margin-bottom: 8px;
 }
 
 .locationDesc {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--color-slate);
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .locationRight {
   position: relative;
   height: 100%;
-  min-height: 340px;
+  min-height: 380px;
 }
 
 .locationRoadImg {
@@ -529,36 +519,46 @@
    SECTION 6: GALLERY SECTION (from SS2)
    ======================================================== */
 .sectionGallery {
-  padding: 80px 0;
+  padding: 90px 0;
   background-color: #FAF7EE;
   border-top: 1px solid var(--color-border);
   text-align: center;
 }
 
-.gallerySlider {
+.galleryGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 30px;
+  gap: 20px;
+  margin-top: 36px;
 }
 
 .galleryCard {
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  background: #FFFFFF;
 }
 
 .galleryCard:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .galleryImg {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   display: block;
+}
+
+.galleryCaption {
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  background: #FFFFFF;
 }
 
 
@@ -566,7 +566,7 @@
    SECTION 7: CONTACT CTA & FORM (from SS2)
    ======================================================== */
 .sectionContactCta {
-  padding: 80px 0;
+  padding: 90px 0;
   background-color: var(--color-ivory);
 }
 
@@ -575,7 +575,7 @@
   background: #FFFFFF;
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  padding: 36px 44px;
+  padding: 38px 46px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -584,7 +584,7 @@
 }
 
 .ctaBannerLeft h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 800;
   color: var(--color-charcoal);
   margin-bottom: 6px;
@@ -592,7 +592,7 @@
 
 .ctaBannerLeft p {
   color: var(--color-slate);
-  font-size: 0.95rem;
+  font-size: 0.96rem;
 }
 
 /* Two-column Contact Form Card */
@@ -610,16 +610,16 @@
 }
 
 .formBox h4 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--color-charcoal);
   margin-bottom: 4px;
 }
 
 .formBox p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--color-slate);
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .actualForm {
@@ -651,7 +651,7 @@
   border-radius: 16px;
   overflow: hidden;
   height: 100%;
-  min-height: 320px;
+  min-height: 340px;
 }
 
 .contactGatePhoto {
@@ -675,7 +675,7 @@
   .highlightItem:not(:last-child)::after {
     display: none;
   }
-  .gallerySlider {
+  .galleryGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -689,15 +689,16 @@
     align-self: flex-start;
   }
   .comingSoonScript {
-    font-size: 3.8rem;
+    font-size: 4rem;
   }
   .headlineBlack, .headlineRed {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
   .infoPillCard {
     flex-direction: column;
     gap: 16px;
     align-items: flex-start;
+    padding: 20px;
   }
   .infoPillDivider {
     display: none;
@@ -707,16 +708,16 @@
     flex-direction: column;
   }
   .lifestyleContent {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .lifestyleTitle {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
   .highlightsGrid {
     grid-template-columns: 1fr;
   }
-  .gallerySlider {
+  .galleryGrid {
     grid-template-columns: 1fr;
   }
 }

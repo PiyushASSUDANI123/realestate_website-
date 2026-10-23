@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
 import ScheduleVisitModal from "./ScheduleVisitModal";
+import MojikaLogo from "./MojikaLogo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,11 +37,7 @@ export default function Navbar() {
           <div className={styles.navInner}>
             {/* Logo from Mockup */}
             <Link href="/" className={styles.logoLink}>
-              <img
-                src="/images/mojika-logo.png"
-                alt="Mojika Group - Building The Trust"
-                className={styles.logoImg}
-              />
+              <MojikaLogo />
             </Link>
 
             {/* Nav Links */}

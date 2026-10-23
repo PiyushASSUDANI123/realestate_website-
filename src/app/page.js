@@ -6,8 +6,6 @@ import {
   Phone,
   ArrowRight,
   MapPin,
-  Maximize2,
-  Calendar,
   Layers,
   Trees,
   ShieldCheck,
@@ -17,6 +15,8 @@ import {
 import styles from "./Home.module.css";
 import ScheduleVisitModal from "@/components/ScheduleVisitModal";
 import BannerModal from "@/components/BannerModal";
+import InteractivePlotSelector from "@/components/InteractivePlotSelector";
+import EmiCalculator from "@/components/EmiCalculator";
 
 export default function HomePage() {
   const [visitModalOpen, setVisitModalOpen] = useState(false);
@@ -41,8 +41,6 @@ export default function HomePage() {
           HERO SECTION - EXACT MATCH TO SS1 (image.png)
           ======================================================== */}
       <section className={styles.heroContainer}>
-        <div className={styles.heroOverlay} />
-
         {/* Content */}
         <div className={styles.heroContentWrapper}>
           <div className={styles.heroLeft}>
@@ -75,7 +73,7 @@ export default function HomePage() {
         <div className={styles.heroBottomArea}>
           <div className={styles.infoPillCard}>
             <div className={styles.infoPillCol}>
-              <MapPin size={24} className={styles.infoPillIcon} />
+              <MapPin size={26} className={styles.infoPillIcon} />
               <div className={styles.infoPillText}>
                 <strong>Moulasar</strong>
                 <span>JAIPUR</span>
@@ -85,7 +83,7 @@ export default function HomePage() {
             <div className={styles.infoPillDivider} />
 
             <div className={styles.infoPillCol}>
-              <Layers size={24} className={styles.infoPillIcon} />
+              <Layers size={26} className={styles.infoPillIcon} />
               <div className={styles.infoPillText}>
                 <strong>100 बीघा</strong>
                 <span>PREMIUM LAND</span>
@@ -95,7 +93,7 @@ export default function HomePage() {
             <div className={styles.infoPillDivider} />
 
             <div className={styles.infoPillCol}>
-              <Compass size={24} className={styles.infoPillIcon} />
+              <Compass size={26} className={styles.infoPillIcon} />
               <div className={styles.infoPillText}>
                 <strong>Coming Soon</strong>
                 <span>A NEW WAY OF LIVING</span>
@@ -136,7 +134,7 @@ export default function HomePage() {
 
             <div className={styles.aboutVisualWrapper}>
               <img
-                src="/images/about-gate.png"
+                src="/images/gate.jpg"
                 alt="Mojika Group Grand Entrance Gate"
                 className={styles.aboutGateImg}
               />
@@ -159,17 +157,23 @@ export default function HomePage() {
                 100 बीघा में फैला यह प्रोजेक्ट सोच-समझकर बनाई गई प्लॉटिंग, चौड़ी सड़कों और बेहतर
                 इंफ्रास्ट्रक्चर के साथ एक नई जीवनशैली प्रदान करेगा।
               </p>
-              <Link href="/projects" className="btn-mockup-secondary">
-                <span>View Project</span>
-                <ArrowRight size={16} />
-              </Link>
+              <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+                <Link href="/projects" className="btn-mockup-secondary">
+                  <span>View Project</span>
+                  <ArrowRight size={16} />
+                </Link>
+                <button onClick={() => setBannerModalOpen(true)} className="btn-mockup-secondary">
+                  <span>View Launch Poster</span>
+                  <ArrowRight size={16} />
+                </button>
+              </div>
             </div>
 
-            <div className={styles.overviewCollage}>
+            <div className={styles.overviewVisual}>
               <img
-                src="/images/overview-collage.png"
-                alt="Mojika Township Overview"
-                className={styles.collageImg}
+                src="/images/plots.jpg"
+                alt="Mojika Plotted Township Aerial Overview"
+                className={styles.overviewImg}
               />
             </div>
           </div>
@@ -243,6 +247,16 @@ export default function HomePage() {
 
 
       {/* ========================================================
+          INTERACTIVE PLOT MASTER LAYOUT SELECTOR (Rich Section)
+          ======================================================== */}
+      <section className={styles.sectionOverview} style={{ background: "#FFFFFF" }}>
+        <div className="container">
+          <InteractivePlotSelector onBookPlot={() => setVisitModalOpen(true)} />
+        </div>
+      </section>
+
+
+      {/* ========================================================
           SECTION 4: LIFESTYLE BANNER (from SS2)
           ======================================================== */}
       <section className={styles.sectionLifestyle}>
@@ -272,7 +286,8 @@ export default function HomePage() {
               <span className="section-tag">OUR LOCATION</span>
               <h2>Moulasar, Jaipur</h2>
               <p className={styles.locationDesc}>
-                A well-connected location with a bright future.
+                A strategically located township connected seamlessly via state highways to Jaipur,
+                Didwana, and Sikar with rapid economic growth.
               </p>
               <a
                 href="https://maps.google.com/?q=Maulasar+Rajasthan"
@@ -287,12 +302,22 @@ export default function HomePage() {
 
             <div className={styles.locationRight}>
               <img
-                src="/images/location-road.png"
-                alt="Moulasar Jaipur Location Road Network"
+                src="/images/highway.jpg"
+                alt="Moulasar Highway Connectivity"
                 className={styles.locationRoadImg}
               />
             </div>
           </div>
+        </div>
+      </section>
+
+
+      {/* ========================================================
+          SMART EMI & INVESTMENT PLANNER (Rich Section)
+          ======================================================== */}
+      <section className={styles.sectionHighlights}>
+        <div className="container">
+          <EmiCalculator onOpenVisitModal={() => setVisitModalOpen(true)} />
         </div>
       </section>
 
@@ -304,18 +329,22 @@ export default function HomePage() {
         <div className="container">
           <span className="section-tag-center">GALLERY SECTION</span>
 
-          <div className={styles.gallerySlider}>
+          <div className={styles.galleryGrid}>
             <div className={styles.galleryCard}>
-              <img src="/images/gallery-1.jpg" alt="Gallery 1" className={styles.galleryImg} />
+              <img src="/images/plots.jpg" alt="100-Bigha Aerial View" className={styles.galleryImg} />
+              <div className={styles.galleryCaption}>100-Bigha Master Plotted Layout</div>
             </div>
             <div className={styles.galleryCard}>
-              <img src="/images/gallery-2.jpg" alt="Gallery 2" className={styles.galleryImg} />
+              <img src="/images/gate.jpg" alt="Grand Entrance Gate" className={styles.galleryImg} />
+              <div className={styles.galleryCaption}>60-Ft Grand Imperial Gateway</div>
             </div>
             <div className={styles.galleryCard}>
-              <img src="/images/gallery-3.jpg" alt="Gallery 3" className={styles.galleryImg} />
+              <img src="/images/hero.jpg" alt="Luxury Villa Architecture" className={styles.galleryImg} />
+              <div className={styles.galleryCaption}>Palm Boulevard & Villa Enclave</div>
             </div>
             <div className={styles.galleryCard}>
-              <img src="/images/gallery-4.jpg" alt="Gallery 4" className={styles.galleryImg} />
+              <img src="/images/clubhouse.jpg" alt="Resort Clubhouse & Pool" className={styles.galleryImg} />
+              <div className={styles.galleryCaption}>Resort Clubhouse & Infinity Pool</div>
             </div>
           </div>
         </div>
@@ -344,15 +373,15 @@ export default function HomePage() {
           <div className={styles.contactGrid}>
             <div className={styles.formBox}>
               <span className="section-tag">GET IN TOUCH</span>
-              <h4>Request Information & Site Visit</h4>
-              <p>For more information about the project.</p>
+              <h4>Request Information & Site Tour</h4>
+              <p>Speak directly with our senior township planners.</p>
 
               {!formSent ? (
                 <form onSubmit={handleFormSubmit} className={styles.actualForm}>
                   <input
                     type="text"
                     required
-                    placeholder="Name"
+                    placeholder="Your Name"
                     value={contactData.name}
                     onChange={(e) => setContactData({ ...contactData, name: e.target.value })}
                     className={styles.formInput}
@@ -360,14 +389,14 @@ export default function HomePage() {
                   <input
                     type="tel"
                     required
-                    placeholder="Phone Number"
+                    placeholder="Phone Number (e.g. 9461051515)"
                     value={contactData.phone}
                     onChange={(e) => setContactData({ ...contactData, phone: e.target.value })}
                     className={styles.formInput}
                   />
                   <textarea
                     rows={3}
-                    placeholder="Message (Optional)"
+                    placeholder="Message / Preferred Plot Size (Optional)"
                     value={contactData.message}
                     onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
                     className={styles.formTextarea}
@@ -378,12 +407,12 @@ export default function HomePage() {
                   </button>
                 </form>
               ) : (
-                <div style={{ background: "#FDFBF1", border: "1px solid #E8DCC5", borderRadius: "10px", padding: "20px", textAlign: "center" }}>
-                  <strong style={{ color: "#8B603D", display: "block", fontSize: "1.1rem" }}>
+                <div style={{ background: "#FDFBF1", border: "1px solid #E8DCC5", borderRadius: "10px", padding: "24px", textAlign: "center" }}>
+                  <strong style={{ color: "#8B603D", display: "block", fontSize: "1.15rem" }}>
                     Thank you, {contactData.name}!
                   </strong>
-                  <p style={{ color: "#6B7280", fontSize: "0.9rem", marginTop: "4px" }}>
-                    Our sales advisor will call you at {contactData.phone} within 15 minutes.
+                  <p style={{ color: "#6B7280", fontSize: "0.92rem", marginTop: "6px" }}>
+                    Our sales advisor will call you at {contactData.phone} within 15 minutes to coordinate your VIP tour.
                   </p>
                 </div>
               )}
@@ -391,8 +420,8 @@ export default function HomePage() {
 
             <div className={styles.contactVisualWrapper}>
               <img
-                src="/images/contact-gate.png"
-                alt="Mojika Group Gate"
+                src="/images/gate.jpg"
+                alt="Mojika Group Gateway"
                 className={styles.contactGatePhoto}
               />
             </div>
